@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:11:22 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/09 15:11:50 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/09 15:33:49 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,18 +54,14 @@ void	sel_sort(int *arr, int n)
 {
 	int		i;
 	int		j;
-	int		ctsw;
 
-	ctsw = 0;
 	i = 0;
 	while (i < n - 1)
 	{
 		j = locof_smallest(arr, i, n - 1);
 		ft_swap(arr, i, j);
-		ctsw++;
 		i++;
 	}
-	printf("%d swap(s)\n", ctsw);
 }
 
 int main(void)
