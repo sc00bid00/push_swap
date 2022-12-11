@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaddnxt.c                                     :+:      :+:    :+:   */
+/*   lists.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/10 13:45:20 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/10 13:49:22 by lsordo           ###   ########.fr       */
+/*   Created: 2022/12/11 18:06:13 by lsordo            #+#    #+#             */
+/*   Updated: 2022/12/11 21:58:04 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "lists.h"
 
-t_list	*ft_lstaddnxt(t_list *head, int *num, int *oix)
+int	main(int argc, char **argv)
 {
-	t_list	*tmp;
+	int		n;
+	t_list	*lst;
 
-	tmp = head;
-	while (tmp)
-		tmp = tmp->next;
-	tmp = malloc(sizeof(t_list));
-	if (tmp == NULL)
-		return (NULL); // should clear all correct afterwards
-	tmp->next = NULL;
-	tmp->num = num;
-	tmp->oix = oix;
-	return (tmp);
+	if (argc > 1)
+	{
+		n = argc - 1;
+		lst = ft_crtlst(n, argv);
+		ft_prtlst(lst);
+		lst = ft_srtlstnum(lst, ft_cmp);
+		ft_prtlst(lst);
+		lst = ft_srtlstidx(lst, ft_cmp);
+		ft_prtlst(lst);
+	}
+	return (0);
 }

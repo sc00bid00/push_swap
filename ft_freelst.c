@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_freelst.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 10:19:04 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/10 17:01:09 by lsordo           ###   ########.fr       */
+/*   Created: 2022/12/11 18:44:30 by lsordo            #+#    #+#             */
+/*   Updated: 2022/12/11 21:32:24 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "lists.h"
 
-int	ft_atoi(const char *str)
+t_list	*ft_freelst(t_list *lst)
 {
-	int	num;
-	int	sign;
+	t_list	*tmp;
 
-	num = 0;
-	sign = 1;
-	while (*str == 32 || (*str >= 9 && *str <= 13))
-		str++;
-	if (*str == '-' || *str == '+')
+	while (lst)
 	{
-		if (*str == '-')
-			sign = -1;
-		str++;
+		if (lst->next)
+			tmp = lst->next;
+		free (lst);
+		lst = tmp;
 	}
-	while (*str >= '0' && *str <= '9')
-	{
-		if (num < 0 && sign < 0)
-			return (0);
-		if (num < 0 && sign > 0)
-			return (-1);
-		num = 10 * num + *str - '0';
-		str++;
-	}
-	return (sign * num);
+	return (NULL);
 }

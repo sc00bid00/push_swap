@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/10 16:41:24 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/10 16:42:59 by lsordo           ###   ########.fr       */
+/*   Created: 2022/12/11 20:34:18 by lsordo            #+#    #+#             */
+/*   Updated: 2022/12/11 21:43:45 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-int	ft_lstsize(t_list *lst)
+#include "lists.h"
+void	ft_swap(t_list *lst1, t_list *lst2)
 {
-	int		i;
+	int		tmp_num;
+	int		tmp_oix;
 
-	i = 0;
-	while (lst)
-	{
-		i++;
-		lst=lst->next;
-	}
-	return (i);
+	tmp_num = lst1->num;
+	tmp_oix = lst1->oix;
+	lst1->num = lst2->num;
+	lst1->oix = lst2->oix;
+	lst2->num = tmp_num;
+	lst2->oix = tmp_oix;
 }

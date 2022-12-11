@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_srtlstidx.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/10 09:02:05 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/10 17:11:06 by lsordo           ###   ########.fr       */
+/*   Created: 2022/12/11 21:56:10 by lsordo            #+#    #+#             */
+/*   Updated: 2022/12/11 22:00:36 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
+#include "lists.h"
 
-typedef struct		s_list
+t_list	*ft_srtlstidx(t_list* lst, int (*ft_cmp)(int, int))
 {
-	int				*num;
-	int				*oix;
-	int				*six;
-	struct s_list	*next;
-}					t_list;
+	t_list	*tlst;
 
-t_list	*ft_lstnew(int *num, int *oix);
-t_list	*ft_lstaddnxt(t_list *head, int *num, int *oix);
-int		ft_lstsize(t_list *lst);
-int		ft_atoi(const char *str);
-void	ft_prtlst(t_list *lst);
-
-#endif
+	tlst = lst;
+	while (lst->next)
+	{
+		if(!ft_cmp(lst->oix, lst->next->oix))
+		{
+			ft_swapidx(lst, lst->next);
+			lst = tlst;
+		}
+		else
+		{
+			lst = lst->next;
+		}
+	}
+	lst = tlst;
+	return(tlst);
+}

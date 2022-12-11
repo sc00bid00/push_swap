@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_cmp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/10 13:39:52 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/10 13:44:29 by lsordo           ###   ########.fr       */
+/*   Created: 2022/12/11 20:48:29 by lsordo            #+#    #+#             */
+/*   Updated: 2022/12/11 20:57:56 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "lists.h"
 
-t_list	*ft_lstnew(int *num, int *oix)
+int	ft_cmp(int a, int b)
 {
-	t_list	*tmp;
-
-	tmp = malloc(sizeof(t_list));
-	if (tmp == NULL)
-		return (NULL);
-	tmp->num = num;
-	tmp->oix = oix;
-	tmp->next = NULL;
-	return (tmp);
+	return (a <= b);
 }
