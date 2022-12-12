@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 18:09:56 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/11 22:00:11 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/12 10:26:14 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,5 @@ int		ft_cmp(int a, int b);
 t_list	*ft_crtlst(int	n, char **argv);
 t_list	*ft_srtlstidx(t_list* lst, int (*ft_cmp)(int, int));
 void	ft_swapidx(t_list *lst1, t_list *lst2);
-
 #endif
 
