@@ -15,15 +15,16 @@ int main(int argc, char **argv)
 		ft_idxstk(&stka,ft_cmp);
 		ft_prtstk(stka, stkb);
 		ft_printf("\n");
-		ft_pa(&stka, &stkb);
-		ft_pa(&stka, &stkb);
-		ft_pa(&stka, &stkb);
-		ft_pa(&stka, &stkb);
+		ft_px(&stka, &stkb);
+		ft_px(&stka, &stkb);
+		ft_px(&stka, &stkb);
+		ft_px(&stka, &stkb);
 		ft_prtstk(stka, stkb);
-		ft_pb(&stka, &stkb);
-		ft_pb(&stka, &stkb);
-		// ft_pb(&stka, &stkb);
-		// ft_pb(&stka, &stkb);
+		ft_px(&stkb, &stka);
+		ft_px(&stkb, &stka);
+		ft_prtstk(stka, stkb);
+		ft_sx(&stka);
+		ft_sx(&stkb);
 		ft_prtstk(stka, stkb);
 	}
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/13 16:49:56 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/13 17:38:45 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ void	ft_idxstk(t_stk **stk, int (*ft_cmp)(int, int));
 void	ft_swap(t_stk *lst1, t_stk *lst2);
 void	ft_swapx(t_stk *lst1, t_stk *lst2);
 int		ft_cmp(int a, int b);
-void	ft_pb(t_stk **stka, t_stk **stkb);
-void	ft_pa(t_stk **stka, t_stk **stkb);
+void	ft_px(t_stk **src, t_stk **dst);
 int		ft_stksize(t_stk *stk);
+void	ft_sx(t_stk **src);
 
 #endif
