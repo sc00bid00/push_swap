@@ -6,14 +6,14 @@
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/13 15:43:12 by lsordo           ###   ########.fr        #
+#    Updated: 2022/12/13 16:50:13 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =	a
 
 SRC =	ft_iserr.c\
-		ft_prtlst.c\
+		ft_prtstk.c\
 		ft_freall.c\
 		ft_newstk.c\
 		ft_addstk.c\

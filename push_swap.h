@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/13 15:42:54 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/13 16:49:56 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct		s_stk
 }					t_stk;
 
 void	ft_iserr(char **argv, int n);
-void	ft_prtlst(t_stk *lst);
+void	ft_prtstk(t_stk *stka, t_stk *stkb);
 void	ft_freall(t_stk *lst);
 void	ft_addstk(t_stk **lst, char **argv, int n);
 t_stk	*ft_newstk(void);
