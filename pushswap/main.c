@@ -7,6 +7,7 @@ int main(int argc, char **argv)
 		t_stk	*stka;
 		ft_iserr(&argv[1], argc - 1);
 		stka = ft_newstk(&argv[1], argc - 1);
+		ft_idxstk(&stka,ft_cmp);
 		ft_prtlst(stka);
 	}
 	return (0);
