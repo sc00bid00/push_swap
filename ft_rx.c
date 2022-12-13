@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 17:48:24 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/13 18:31:09 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/13 18:36:00 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_rx(t_stk **stk)
 
 	tmp = *stk;
 	head = tmp->next;
-	while(tmp->next)
+	while (tmp->next)
 		tmp = tmp->next;
 	tmp->next = *stk;
 	(*stk)->next = NULL;

@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/13 18:01:19 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/13 18:38:19 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "./libft/libft.h"
 # include "./ft_printf/ft_printf.h"
 
-typedef struct		s_stk
+typedef struct s_stk
 {
 	int				num;
 	int				oix;

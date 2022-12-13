@@ -6,13 +6,13 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 15:41:22 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/13 15:44:58 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/13 18:36:20 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		ft_stksize(t_stk *stk)
+int	ft_stksize(t_stk *stk)
 {
 	int		i;
 

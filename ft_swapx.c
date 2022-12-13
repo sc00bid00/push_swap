@@ -6,14 +6,14 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 05:23:44 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/13 12:06:21 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/13 18:37:31 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 // swaps numbers, natural and sorted indexes used while sortng the stack
 // back to original state
-void ft_swapx(t_stk *lst1, t_stk *lst2)
+void	ft_swapx(t_stk *lst1, t_stk *lst2)
 {
 	int	tnum;
 	int	toix;
