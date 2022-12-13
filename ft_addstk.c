@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:07:41 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/13 12:02:18 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/13 15:50:07 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ void	ft_addstk(t_stk **lst, char **argv, int n)
 	int		i;
 
 	tmp = *lst;
-	i = 0;
-	while (i < n)
+	i = 1;
+	while (i <= n)
 	{
-		tmp->num = ft_atoi(argv[i]);
+		tmp->num = ft_atoi(argv[i - 1]);
 		tmp->oix = i;
-		tmp->six = n - 1 - i;
-		if (i == n - 1)
+		tmp->six = n - i + 1;
+		if (i == n)
 			tmp->next = NULL;
 		else
 		{
