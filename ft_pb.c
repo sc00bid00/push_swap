@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_freelst.c                                       :+:      :+:    :+:   */
+/*   ft_pb.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/11 18:44:30 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/11 21:32:24 by lsordo           ###   ########.fr       */
+/*   Created: 2022/12/13 14:16:29 by lsordo            #+#    #+#             */
+/*   Updated: 2022/12/13 14:51:58 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lists.h"
+#include "push_swap.h"
+// head of stak b becomes head of stack a
 
-t_list	*ft_freelst(t_list *lst)
+void	ft_pb(t_stk **stka, t_stk **stkb)
 {
-	t_list	*tmp;
+	t_stk	*tmp;
 
-	while (lst)
-	{
-		if (lst->next)
-			tmp = lst->next;
-		free (lst);
-		lst = tmp;
-	}
-	return (NULL);
+	tmp = *stkb;
+	*stkb = (*stkb)->next;
+	tmp->next = *stka;
+	*stka = tmp;
 }

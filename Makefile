@@ -5,41 +5,58 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/12/11 18:48:48 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/12 10:26:19 by lsordo           ###   ########.fr        #
+#    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
+#    Updated: 2022/12/13 14:26:13 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	lists
-SRC =	ft_freelst.c\
+NAME =	a
+
+SRC =	ft_iserr.c\
 		ft_prtlst.c\
+		ft_freall.c\
+		ft_newstk.c\
+		ft_addstk.c\
+		ft_isdouble.c\
+		ft_idxstk.c\
 		ft_swap.c\
-		ft_srtlstnum.c\
+		ft_swapx.c\
 		ft_cmp.c\
-		ft_crtlst.c\
-		ft_srtlstidx.c\
-		ft_swapidx.c\
-		lists.c
+		ft_pa.c\
+		ft_pb.c\
+		main.c
 
 OBJ =	$(SRC:.c=.o)
-DEP =	lists.h
-CC = cc
-CFLAGS = -Wall -Werror -Wextra
+
+LIB =   ./libft/libft.a \
+		./ft_printf/libftprintf.a
+
+CC= cc
+
+CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+$(NAME): $(OBJ) $(LIB)
+	$(CC) $(OBJ) $(LIB) -o $(NAME)
 
-%.o: %.c $(DEP)
+$(LIB):
+	$(MAKE) -C ./libft/
+	$(MAKE) -C ./ft_printf/
+
+%.o: %.c
 	$(CC) -c $(CFLAGS) $(SRC)
 
 clean:
 	rm -f *.o
+	make clean -C ./libft/
+	make clean -C ./ft_printf/
 
 fclean: clean
 	rm -f $(NAME)
+	make fclean	-C ./libft/
+	make fclean	-C ./ft_printf/
 
 re: fclean all
 
-
+.PHONY: all clean fclean re

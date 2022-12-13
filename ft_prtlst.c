@@ -5,24 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/11 18:30:58 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/12 10:29:08 by lsordo           ###   ########.fr       */
+/*   Created: 2022/12/12 17:21:44 by lsordo            #+#    #+#             */
+/*   Updated: 2022/12/13 12:05:21 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lists.h"
-
-void	ft_prtlst(t_list *lst)
+#include "push_swap.h"
+// prints the list to screeen used for debugging and surveillance
+void	ft_prtlst(t_stk *lst)
 {
-	t_list	*tmp;
-
-	tmp = lst;
-	printf("orgnl\tsrted\tnumbr\n");
-	printf("-----\t-----\t-----\n");
-	while (tmp)
+	while (lst)
 	{
-		printf("%d\t%d\t%d\n", tmp->oix, tmp->six, tmp->num);
-		tmp = tmp->next;
+		ft_printf("%d %d %d\n", lst->oix, lst->six, lst->num);
+		lst = lst->next;
 	}
-	printf("\n");
 }

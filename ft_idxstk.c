@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iserr.c                                         :+:      :+:    :+:   */
+/*   ft_idxstk.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 15:26:50 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/12 19:34:41 by lsordo           ###   ########.fr       */
+/*   Created: 2022/12/12 19:36:36 by lsordo            #+#    #+#             */
+/*   Updated: 2022/12/13 12:03:45 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	ft_iserr(char **argv, int n)
+// indexes stack a according to natural and descending order
+void	ft_idxstk(t_stk **stk, int (*ft_cmp)(int, int))
 {
-	int		i;
-	int		j;
-	char	*s;
+	t_stk	*tmp;
 
-	i = 0;
-	while (i < n)
+	tmp = *stk;
+	while (tmp->next)
 	{
-		s = argv[i];
-		j = 0;
-		while (s[j])
+		if (!ft_cmp(tmp->num, tmp->next->num))
 		{
-			if ((!ft_isdigit(s[j]) && s[j] != '+' && s[j] != '-')
-				|| (ft_atoi(s) == 0 && s[0] != '0')
-				|| ((ft_atoi(s)) == -1 && s[0] != '-'))
-				exit (0);
-			j++;
+			ft_swap(tmp, tmp->next);
+			tmp = *stk;
 		}
-		i++;
+		else
+			tmp = tmp->next;
 	}
-	ft_isdouble(argv, n);
+	tmp = *stk;
+	while (tmp->next)
+	{
+		if (!ft_cmp(tmp->oix, tmp->next->oix))
+		{
+			ft_swapx(tmp, tmp->next);
+			tmp = *stk;
+		}
+		else
+			tmp = tmp->next;
+	}
+	tmp = *stk;
 }

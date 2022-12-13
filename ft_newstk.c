@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swapx.c                                         :+:      :+:    :+:   */
+/*   ft_newstk.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/13 05:23:44 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/13 05:35:40 by lsordo           ###   ########.fr       */
+/*   Created: 2022/12/12 17:08:05 by lsordo            #+#    #+#             */
+/*   Updated: 2022/12/13 12:05:00 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void ft_swapx(t_stk *lst1, t_stk *lst2)
+// initiates the stack creating the head of list
+t_stk	*ft_newstk(char **argv, int n)
 {
-	int	tnum;
-	int	toix;
-	int	tsix;
+	t_stk	*lst;
 
-	tnum = lst1->num;
-	toix = lst1->oix;
-	tsix = lst1->six;
-	lst1->num = lst2->num;
-	lst1->oix = lst2->oix;
-	lst1->six = lst2->six;
-	lst2->num = tnum;
-	lst2->oix = toix;
-	lst2->six = tsix;
+	lst = malloc(sizeof(t_stk));
+	if (!lst)
+		return (NULL);
+	lst->next = NULL;
+	ft_addstk(&lst, argv, n);
+	return (lst);
 }
