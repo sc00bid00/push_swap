@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cmp.c                                           :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/13 05:19:34 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/13 18:33:27 by lsordo           ###   ########.fr       */
+/*   Created: 2022/10/11 14:38:08 by lsordo            #+#    #+#             */
+/*   Updated: 2022/10/18 16:28:03 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-// setup stack a: orders elements ascending
-int	ft_cmp(int a, int b)
+#include	"libft.h"
+
+int	ft_isalnum(int c)
 {
-	return (a <= b);
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')
+		|| (c >= '0' && c <= '9'))
+		return (1);
+	return (0);
 }

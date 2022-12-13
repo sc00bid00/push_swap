@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cmp.c                                           :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/13 05:19:34 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/13 18:33:27 by lsordo           ###   ########.fr       */
+/*   Created: 2022/10/19 15:47:56 by lsordo            #+#    #+#             */
+/*   Updated: 2022/10/26 20:02:21 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-// setup stack a: orders elements ascending
-int	ft_cmp(int a, int b)
+#include	"libft.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	return (a <= b);
+	char	*str;
+	size_t	len;
+
+	if (!s1 || ! s2)
+		return (NULL);
+	len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	str = (char *)malloc(len * sizeof(char));
+	if (!str)
+		return (NULL);
+	ft_memcpy(str, s1, ft_strlen(s1));
+	ft_memcpy(str + ft_strlen(s1), s2, ft_strlen(s2));
+	*(str + ft_strlen(s1) + ft_strlen(s2)) = '\0';
+	return (str);
 }

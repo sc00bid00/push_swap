@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cmp.c                                           :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/13 05:19:34 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/13 18:33:27 by lsordo           ###   ########.fr       */
+/*   Created: 2022/10/31 16:18:46 by lsordo            #+#    #+#             */
+/*   Updated: 2022/11/02 08:06:58 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-// setup stack a: orders elements ascending
-int	ft_cmp(int a, int b)
+#include	"libft.h"
+
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	return (a <= b);
+	t_list	*ptr;
+
+	ptr = ft_lstlast(*lst);
+	if (ptr)
+		ptr->next = new;
+	else
+		*lst = new;
 }

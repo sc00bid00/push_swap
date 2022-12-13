@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cmp.c                                           :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/13 05:19:34 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/13 18:33:27 by lsordo           ###   ########.fr       */
+/*   Created: 2022/10/11 17:39:46 by lsordo            #+#    #+#             */
+/*   Updated: 2022/10/18 16:27:32 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-// setup stack a: orders elements ascending
-int	ft_cmp(int a, int b)
+#include	"libft.h"
+
+int	ft_toupper(int c)
 {
-	return (a <= b);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
 }

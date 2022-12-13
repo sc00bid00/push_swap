@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cmp.c                                           :+:      :+:    :+:   */
+/*   ft_rx.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/13 05:19:34 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/13 18:33:27 by lsordo           ###   ########.fr       */
+/*   Created: 2022/12/13 17:48:24 by lsordo            #+#    #+#             */
+/*   Updated: 2022/12/13 18:36:00 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// setup stack a: orders elements ascending
-int	ft_cmp(int a, int b)
+// head of stack moves to tail
+
+void	ft_rx(t_stk **stk)
 {
-	return (a <= b);
+	t_stk	*head;
+	t_stk	*tmp;
+
+	tmp = *stk;
+	head = tmp->next;
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = *stk;
+	(*stk)->next = NULL;
+	*stk = head;
 }
