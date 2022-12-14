@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/13 18:38:19 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/14 09:17:52 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ void	ft_px(t_stk **src, t_stk **dst);
 int		ft_stksize(t_stk *stk);
 void	ft_sx(t_stk **src);
 void	ft_rx(t_stk **stk);
+void	ft_rrx(t_stk **stk);
 
 #endif

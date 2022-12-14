@@ -33,6 +33,11 @@ int main(int argc, char **argv)
 		ft_rx(&stka);
 		ft_printf("\nra\n");
 		ft_prtstk(stka, stkb);
+		ft_rrx(&stka);
+		ft_rrx(&stka);
+		ft_printf("\n2x rra\n");
+		ft_prtstk(stka, stkb);
+
 	}
 	return (0);
 }
