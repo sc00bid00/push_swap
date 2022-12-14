@@ -6,33 +6,35 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:07:41 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/14 10:40:59 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/14 11:44:02 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 // setup stack a: adds a node and idexes it
-void	ft_addstk(t_stk **lst, char **argv, int n)
-{
-	t_stk	*tmp;
-	int		i;
 
-	tmp = *lst;
-	i = 1;
-	while (i <= n)
+void	ft_addstk(t_stk **stk, char **argv, int n)
+{
+	int		i;
+	t_stk	*tmp;
+
+	tmp = *stk;
+	i = 0;
+	while (i < n)
 	{
-		tmp->num = ft_atoi(argv[i - 1]);
-		tmp->oix = i;
-		tmp->six = i;
-		if (i == n)
-			tmp->next = NULL;
+		(*stk)->num = ft_atoi(argv[i]);
+		(*stk)->oix = i;
+		(*stk)->six = i;
+		if (i == n - 1)
+			(*stk)->next = NULL;
 		else
 		{
-			tmp->next = malloc(sizeof(t_stk));
-			if (!tmp->next)
-				ft_freall(*lst);
-			tmp = tmp->next;
+			(*stk)->next = malloc(sizeof(t_stk));
+			if (!(*stk)->next)
+				ft_freall(*stk);
+			*stk = (*stk)->next;
 		}
 		i++;
 	}
+	*stk = tmp;
 }

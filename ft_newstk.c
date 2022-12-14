@@ -6,19 +6,20 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 17:08:05 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/13 15:36:23 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/14 11:42:56 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// initiates the stack creating the head of list
+// initiates the stack creating an empty head
+
 t_stk	*ft_newstk(void)
 {
-	t_stk	*lst;
+	t_stk	*stk;
 
-	lst = malloc(sizeof(t_stk));
-	if (!lst)
+	stk = malloc(sizeof(t_stk));
+	if (!stk)
 		return (NULL);
-	lst->next = NULL;
-	return (lst);
+	stk->next = NULL;
+	return (stk);
 }
