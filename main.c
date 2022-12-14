@@ -7,6 +7,10 @@ int main(int argc, char **argv)
 	{
 		t_stk	*stka;
 		t_stk	*stkb;
+		int		size;
+		int		x;
+		int		p;
+		int		i;
 
 		stka = NULL;
 		stkb = NULL;
@@ -15,29 +19,23 @@ int main(int argc, char **argv)
 		ft_addstk(&stka, &argv[1], argc - 1);
 		ft_idxstk(&stka,ft_cmp);
 		ft_printf("\nStack a & b\n");
-		ft_prtstk(stka, stkb);
-		ft_px(&stka, &stkb);
-		ft_px(&stka, &stkb);
-		ft_px(&stka, &stkb);
-		ft_px(&stka, &stkb);
-		ft_printf("\n4x pa\n");
-		ft_prtstk(stka, stkb);
-		ft_px(&stkb, &stka);
-		ft_px(&stkb, &stka);
-		ft_printf("\n2x pb\n");
-		ft_prtstk(stka, stkb);
-		ft_sx(&stka);
-		ft_sx(&stkb);
-		ft_printf("\nss (sa sb)\n");
-		ft_prtstk(stka, stkb);
-		ft_rx(&stka);
-		ft_printf("\nra\n");
-		ft_prtstk(stka, stkb);
-		ft_rrx(&stka);
-		ft_rrx(&stka);
-		ft_printf("\n2x rra\n");
-		ft_prtstk(stka, stkb);
-
+		ft_pstkid(stka);
+		size = ft_stksize(stka);
+		x = size / 2;
+		p = ft_fndnst(stka, x);
+		i = 0;
+		if (p < x)
+		{
+			i = 0;
+			while (i < p)
+			{
+				ft_rx(&stka);
+				i++;
+			}
+		}
+		else
+			
+		ft_pstkid(stka);
 	}
 	return (0);
 }
