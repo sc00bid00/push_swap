@@ -6,12 +6,12 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 09:43:48 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/14 12:00:59 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/14 13:23:29 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// finds the nearest element either head or tail
+// returns the location in the stack of an elemnt basing on its sorted index
 
 int	ft_fndnst(t_stk *stk, int x)
 {

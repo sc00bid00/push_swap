@@ -10,11 +10,7 @@ int main(int argc, char **argv)
 
 		stka = NULL;
 		stkb = NULL;
-		ft_iserr(&argv[1], argc - 1);
-		stka = ft_newstk();
-		ft_addstk(&stka, &argv[1], argc - 1);
-		ft_idxstk(&stka,ft_cmp);
-		ft_pstkid(stka);
+		ft_sstk(&stka, &stkb, &argv[1], argc - 1);
 	}
 	return (0);
 }

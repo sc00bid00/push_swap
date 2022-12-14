@@ -6,12 +6,13 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:26:50 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/13 12:04:39 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/14 13:37:37 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 // exits the programm if not integer or not digits
+
 void	ft_iserr(char **argv, int n)
 {
 	int		i;
@@ -33,5 +34,5 @@ void	ft_iserr(char **argv, int n)
 		}
 		i++;
 	}
-	ft_isdouble(argv, n);
+	ft_isdble(argv, n);
 }
