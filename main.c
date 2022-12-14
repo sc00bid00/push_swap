@@ -11,6 +11,7 @@ int main(int argc, char **argv)
 		stka = NULL;
 		stkb = NULL;
 		ft_sstk(&stka, &stkb, &argv[1], argc - 1);
+		ft_prtstk(stka, stkb);
 	}
 	return (0);
 }
