@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sstk.c                                          :+:      :+:    :+:   */
+/*   ft_init.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:25:55 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/14 15:24:04 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/15 13:34:28 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_sstk(t_stk **stka, t_stk **stkb, char **argv, int n)
+void	ft_init(t_stk **stka, t_stk **stkb, char **argv, int n)
 {
 	ft_iserr(argv, n);
 	*stka = ft_newstk();

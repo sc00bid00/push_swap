@@ -6,7 +6,7 @@
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/15 11:15:35 by lsordo           ###   ########.fr        #
+#    Updated: 2022/12/15 13:34:58 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRC =	ft_iserr.c\
 		ft_rx.c\
 		ft_rrx.c\
 		ft_pstkid.c\
-		ft_sstk.c\
+		ft_init.c\
 		ft_abs.c\
 		ft_cost.c\
 		ft_slast.c\
