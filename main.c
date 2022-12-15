@@ -1,21 +1,24 @@
 
 #include "push_swap.h"
 
-int main(int argc, char **argv)
+int main(void)
 {
-	if (argc > 1)
-	{
-		t_stk	*stka;
-		t_stk	*stkb;
+	t_stk	*stka;
+	t_stk	*stkb;
+	char	*arg;
+	char	**argv;
+	int		argc;
 
-		stka = NULL;
-		stkb = NULL;
-		ft_sstk(&stka, &stkb, &argv[1], argc - 1);
-		ft_px(&stka, &stkb);
-		ft_px(&stka,&stkb);
-		ft_px(&stka, &stkb);
-		ft_prtstk(stka, stkb);
-	}
+
+	arg = "42 56 -90 -27 69 -69 -45 -29 77 12";
+	argv = ft_split(arg, ' ');
+	argc = ft_cntarr(argv);
+	stka = NULL;
+	stkb = NULL;
+	ft_init(&stka, &stkb, argv, argc);
+	ft_prtstk(stka, stkb);
+	ft_sort(&stka, &stkb);
+	ft_prtstk(stka, stkb);
 	return (0);
 }
 
