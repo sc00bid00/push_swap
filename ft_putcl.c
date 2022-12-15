@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 19:29:31 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/14 20:27:42 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/15 11:38:26 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 void	ft_putcl(t_stk **src, t_stk **dst)
 {
-	int	r;
-	int	rr;
-	int	start;
-
-	if(ft_stksize(*dst) > 1)
+	if (ft_ismax((*src)->six, *dst))
+		ft_px(src, dst);
+	else if (ft_ismin((*src)->six, *dst))
 	{
-		start = (*src)->six;
-		r = ft_rots(*dst, &start, &start);
-		rr
+		ft_px(src, dst);
+		ft_rx(dst, 1);
 	}
-
-
-	ft_px(src, dst);
+	else
+	{
+		ft_rx(dst, ft_rottsml((*src)->six, *dst));
+		ft_px(src, dst);
+	}
 }

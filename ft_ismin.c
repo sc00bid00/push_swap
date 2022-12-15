@@ -5,31 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/14 14:30:00 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/14 14:34:05 by lsordo           ###   ########.fr       */
+/*   Created: 2022/12/15 11:02:11 by lsordo            #+#    #+#             */
+/*   Updated: 2022/12/15 11:03:37 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// gets the minimum number of rotations
 
-int	ft_ismin(int a, int b)
+int	ft_ismin(int n, t_stk *stk)
 {
-	int	r;
-
-	if(ft_abs(a) <= ft_abs(b))
+	while (stk)
 	{
-		if (a >= 0)
-			r = a;
-		else
-			r = -a;
+		if (n > stk->six)
+			return (0);
+		stk = stk->next;
 	}
-	else
-	{
-		if (b >= 0)
-			r = b;
-		else
-			r = -b;
-	}
-	return (r);
+	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/14 19:38:18 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/15 11:15:18 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,18 +39,19 @@ int		ft_stksize(t_stk *stk);
 void	ft_sx(t_stk **src);
 void	ft_rx(t_stk **stk, int n);
 void	ft_rrx(t_stk **stk, int n);
-int		ft_fndnst(t_stk *stk, int x);
 void	ft_pstkid(t_stk *stk);
 void	ft_sstk(t_stk **stka, t_stk **stkb, char **argv, int n);
 int		ft_cost(t_stk *stk, int p);
 t_stk	*ft_slast(t_stk *stk);
 int		ft_abs(int	n);
-int		ft_ismin(int a, int b);
 int		ft_cost(t_stk *stk, int p);
 int		ft_isinst(t_stk *stk, int ix);
 void	ft_pullcl(t_stk **src, t_stk **dst, int	*start, int *end);
 int		ft_rots(t_stk *stk, int *start, int *end);
 int		ft_rrots(t_stk *stk, int *start, int *end);
 void	ft_putcl(t_stk **src, t_stk **dst);
+int		ft_ismax(int n, t_stk *stk);
+int		ft_ismin(int n, t_stk *stk);
+int		ft_rottsml(int n, t_stk *stk);
 
 #endif

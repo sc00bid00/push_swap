@@ -6,7 +6,7 @@
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/14 19:38:28 by lsordo           ###   ########.fr        #
+#    Updated: 2022/12/15 11:15:35 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,11 +27,9 @@ SRC =	ft_iserr.c\
 		ft_sx.c\
 		ft_rx.c\
 		ft_rrx.c\
-		ft_fndnst.c\
 		ft_pstkid.c\
 		ft_sstk.c\
 		ft_abs.c\
-		ft_ismin.c\
 		ft_cost.c\
 		ft_slast.c\
 		ft_isinst.c\
@@ -39,6 +37,9 @@ SRC =	ft_iserr.c\
 		ft_rots.c\
 		ft_rrots.c\
 		ft_putcl.c\
+		ft_ismax.c\
+		ft_ismin.c\
+		ft_rottsml.c\
 		main.c
 
 OBJ =	$(SRC:.c=.o)
