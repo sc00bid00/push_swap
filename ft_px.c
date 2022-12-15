@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 12:21:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/14 20:06:32 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/15 20:40:01 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,20 @@ void	ft_px(t_stk **src, t_stk **dst)
 
 	if (*src != NULL)
 	{
-		if (*dst == NULL)
-			*dst = ft_newstk();
 		tmp = *src;
-		*src = (*src)->next;
-		tmp->next = *dst;
-		*dst = tmp;
-		if ((*dst)->next->oix == 0)
+		if ((*src)->next != NULL)
+			*src = (*src)->next;
+		else
+			*src = NULL;
+		if (*dst == NULL)
+		{
+			*dst = tmp;
 			(*dst)->next = NULL;
+		}
+		else if(*dst != NULL)
+		{
+			tmp->next = *dst;
+			*dst = tmp;
+		}
 	}
 }

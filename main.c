@@ -15,8 +15,10 @@ int main(void)
 	argc = ft_cntarr(argv);
 	stka = NULL;
 	stkb = NULL;
-	ft_init(&stka, &stkb, argv, argc);
+	ft_init(&stka, argv, argc);
+	ft_pstkid(stka);
 	ft_prtstk(stka, stkb);
+	ft_px(&stka, &stkb);
 	ft_sort(&stka, &stkb);
 	ft_prtstk(stka, stkb);
 	return (0);
