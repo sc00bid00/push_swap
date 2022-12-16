@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/15 23:07:43 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/16 07:44:20 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int		ft_ismax(int n, t_stk *stk);
 int		ft_ismin(int n, t_stk *stk);
 int		ft_rottsml(int n, t_stk *stk);
 int		ft_cntarr(char **arr);
-void	ft_sort(t_stk **stka, t_stk	**stkb);
+int		ft_maxstk(t_stk *stk);
+int		ft_minstk(t_stk *stk);
 
 #endif

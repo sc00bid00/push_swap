@@ -9,7 +9,6 @@ int main(void)
 	char	**argv;
 	int		argc;
 
-
 	arg = "42 56 -90 -27 69 -69 -45 -29 77 12";
 	argv = ft_split(arg, ' ');
 	argc = ft_cntarr(argv);
@@ -17,10 +16,7 @@ int main(void)
 	stkb = NULL;
 	ft_init(&stka, argv, argc);
 	ft_pstkid(stka);
-	ft_prtstk(stka, stkb);
-	ft_px(&stka, &stkb);
-	ft_sort(&stka, &stkb);
-	ft_prtstk(stka, stkb);
+	ft_printf("pos of min ind in stk is %d\n", ft_minstk(stka));
 	return (0);
 }
 
