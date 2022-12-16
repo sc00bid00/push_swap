@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 10:19:04 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/12 16:21:37 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/11/02 16:55:36 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		num = 10 * num + *str - '0';
 		if (num < 0 && sign < 0)
 			return (0);
 		if (num < 0 && sign > 0)
 			return (-1);
+		num = 10 * num + *str - '0';
 		str++;
 	}
 	return (sign * num);
