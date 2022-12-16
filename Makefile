@@ -6,7 +6,7 @@
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/16 07:44:33 by lsordo           ###   ########.fr        #
+#    Updated: 2022/12/16 07:55:36 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ SRC =	ft_iserr.c\
 		ft_cntarr.c\
 		ft_maxstk.c\
 		ft_minstk.c\
+		ft_midstk.c\
 		main.c
 
 OBJ =	$(SRC:.c=.o)
