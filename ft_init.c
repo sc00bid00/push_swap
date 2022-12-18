@@ -6,11 +6,28 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 17:03:17 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/18 17:55:38 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/18 18:08:32 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	ft_isdble(t_stk *arg)
+{
+	t_stk	*tmp;
+
+	while (arg)
+	{
+		tmp = arg;
+		while (tmp->next)
+		{
+			tmp = tmp->next;
+			if (arg->num == tmp->num)
+				exit(0);
+		}
+		arg = arg->next;
+	}
+}
 
 int		ft_iserr(char *s)
 {
@@ -72,4 +89,5 @@ void	ft_init(int argc, char **argv, t_stk **arg)
 		}
 		i++;
 	}
+	ft_isdble(*arg);
 }
