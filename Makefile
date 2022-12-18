@@ -6,17 +6,15 @@
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/17 08:40:12 by lsordo           ###   ########.fr        #
+#    Updated: 2022/12/18 17:04:51 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =	a
 
-SRC =	ft_stkaddback.c\
-		ft_stklast.c\
-		ft_stknew.c\
+SRC =	ft_init.c\
 		ft_prtstk.c\
-		push_swap.c
+		main.c
 
 OBJ =	$(SRC:.c=.o)
 
