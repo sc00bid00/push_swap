@@ -6,13 +6,27 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 17:03:17 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/18 17:50:18 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/18 17:55:38 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+int		ft_iserr(char *s)
+{
+	int	j;
 
+	j = 0;
+		while (s[j])
+		{
+			if ((!ft_isdigit(s[j]) && s[j] != '+' && s[j] != '-')
+				|| (ft_atoi(s) == 0 && s[0] != '0')
+				|| ((ft_atoi(s)) == -1 && s[0] != '-'))
+				return (1);
+			j++;
+		}
+		return (0);
+}
 
 t_stk	*ft_makenw(char *s)
 {
@@ -21,7 +35,7 @@ t_stk	*ft_makenw(char *s)
 	tmp = malloc(sizeof(t_stk));
 	if (tmp != NULL && !ft_iserr(s))
 	{
-		tmp->arg = s;
+		tmp->num = ft_atoi(s);
 		tmp->next = NULL;
 	}
 	else
