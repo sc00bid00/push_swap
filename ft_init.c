@@ -6,21 +6,26 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 17:03:17 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/18 17:22:03 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/18 17:50:18 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+
 
 t_stk	*ft_makenw(char *s)
 {
 	t_stk	*tmp;
 
 	tmp = malloc(sizeof(t_stk));
-	if (tmp == NULL)
+	if (tmp != NULL && !ft_iserr(s))
+	{
+		tmp->arg = s;
+		tmp->next = NULL;
+	}
+	else
 		exit(0);
-	tmp->arg = s;
-	tmp->next = NULL;
 	return (tmp);
 }
 
