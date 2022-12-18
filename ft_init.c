@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 17:03:17 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/18 21:43:43 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/18 22:30:19 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,10 @@
 
 void	ft_abort(char **arr, t_stk **arg)
 {
-	int		j;
-	t_stk	*tmp;
-
-	j = 0;
-	if (arr[0])
-	{
-		while (arr[j])
-		{
-			free(arr[j]);
-			j++;
-		}
-		free(arr);
-
-	}
-	if (*arg)
-	{
-		while (arg && *arg)
-		{
-			if ((*arg)->next)
-				tmp = (*arg)->next;
-			free(*arg);
-			*arg = tmp;
-		}
-		ft_printf("Error\n");
-		exit(0);
-	}
+	ft_freear(arr);
+	ft_freearg(arg);
+	ft_printf("Error\n");
+	exit(0);
 }
 
 int		ft_isdble(t_stk *arg)
@@ -78,6 +56,8 @@ int		ft_iserr(char *s)
 
 void	ft_makenw(int j, char **arr, t_stk **arg)
 {
+	t_stk	*tmp;
+
 	if (ft_iserr(arr[j]))
 		ft_abort(arr, arg);
 	if (*arg == NULL)
@@ -89,14 +69,16 @@ void	ft_makenw(int j, char **arr, t_stk **arg)
 		(*arg)->next = NULL;
 	}
 	else
-	{
-		(*arg)->next = malloc(sizeof(t_stk));
-		*arg = (*arg)->next;
-		if (*arg == NULL)
+	{	tmp = *arg;
+		while(tmp->next)
+			tmp = tmp->next;
+		tmp->next=malloc(sizeof(t_stk));
+		if (tmp->next == NULL)
 			ft_abort(arr, arg);
+		tmp->next->num=ft_atoi(arr[j]);
+		tmp->next->next = NULL;
 	}
 }
-
 
 void	ft_init(int argc, char **argv, t_stk **arg)
 {
@@ -115,7 +97,9 @@ void	ft_init(int argc, char **argv, t_stk **arg)
 			j++;
 		}
 		i++;
+		ft_freear(arr);
 	}
 	if (ft_isdble(*arg))
 		ft_abort(arr, arg);
+
 }
