@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 15:13:32 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 16:53:10 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,18 @@ typedef struct s_stk
 
 typedef struct s_var
 {
-	int		i;
-	int		j;
-	int		size;
-	int		imax;
-	int		imin;
+	int		idnt;
+	int		staz;
+	int		stah;
+	int		clnb;
+	int		clsz;
 }			t_var;
 
 void	ft_prtstk(t_stk	*sta, t_stk *stb);
 void	ft_init(int argc, char **argv, t_stk **arg);
 void	ft_freear(char **arr);
-void 	ft_freearg(t_stk **arg);
-void	ft_index(t_stk **stk);
+void	ft_freearg(t_stk **arg);
+void	ft_index(t_stk **stk, t_var *var);
 void	pa(t_stk **sta, t_stk **stb);
 void	pb(t_stk **stb, t_stk **sta);
 void	sa(t_stk **stk);
@@ -45,5 +45,7 @@ void	ss(t_stk **sta, t_stk **stb);
 void	ra(t_stk **sta);
 void	rb(t_stk **stb);
 void	rra(t_stk **sta);
-
+void	ft_defclt(t_var *var);
+void	ft_pregrp(t_stk **sta, t_stk **stb, t_var *var);
+void	ft_idntty(t_stk **sta, t_var *var);
 #endif

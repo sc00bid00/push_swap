@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 12:36:30 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 14:58:38 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 16:50:53 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,10 @@ void	ft_srtd(t_stk **stk)
 		tmp = tmp->next;
 		i++;
 	}
+	tmp = *stk;
 }
 
-void	ft_ntrl(t_stk **stk)
+void	ft_ntrl(t_stk **stk, t_var *var)
 {
 	int		i;
 	t_stk	*tmp;
@@ -78,14 +79,15 @@ void	ft_ntrl(t_stk **stk)
 		tmp = tmp->next;
 		i++;
 	}
+	var->staz = i;
 }
 
-void	ft_index(t_stk **stk)
+void	ft_index(t_stk **stk, t_var *var)
 {
 	t_stk	*tmp;
 	t_stk	*tmp0;
 
-	ft_ntrl(stk);
+	ft_ntrl(stk, var);
 	tmp0 = *stk;
 	while (tmp0)
 	{
