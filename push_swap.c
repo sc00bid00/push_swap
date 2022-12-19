@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 17:02:35 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 14:27:51 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 14:41:29 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ int main(int argc, char **argv)
 		pa(&sta, &stb);
 		pa(&sta, &stb);
 		pa(&sta, &stb);
+		pa(&sta, &stb);
+		ft_prtstk(sta, stb);
+		pb(&stb, &sta);
+		pb(&stb, &sta);
+		pb(&stb, &sta);
 		ft_prtstk(sta, stb);
 		ft_freearg(&sta);
 	}

@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 08:38:20 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 14:25:54 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 14:40:44 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,5 @@ void	ft_prtstk(t_stk	*sta, t_stk *stb)
 		else
 			ft_printf("\n");
 	}
+	ft_printf("\n");
 }
