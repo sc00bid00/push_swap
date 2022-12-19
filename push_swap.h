@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 14:49:11 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 14:57:38 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ void	ft_freear(char **arr);
 void 	ft_freearg(t_stk **arg);
 void	ft_index(t_stk **stk);
 void	pa(t_stk **sta, t_stk **stb);
-void	pb(t_stk **sta, t_stk **stb);
-void	sa(t_stk **sta);
-
+void	pb(t_stk **stb, t_stk **sta);
+void	sa(t_stk **stk);
+void	sb(t_stk **stk);
+void	ss(t_stk **sta, t_stk **stb);
 #endif

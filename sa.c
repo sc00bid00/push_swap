@@ -6,22 +6,22 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 14:43:10 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 14:51:36 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 14:55:20 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_stk **sta)
+void	sa(t_stk **stk)
 {
 	t_stk	*tmp;
 
-	if ((*sta)->next)
+	if ((*stk)->next)
 	{
-		tmp = (*sta)->next;
-		(*sta)->next = (*sta)->next->next;
-		tmp->next = (*sta);
-		(*sta) = tmp;
+		tmp = (*stk)->next;
+		(*stk)->next = (*stk)->next->next;
+		tmp->next = (*stk);
+		(*stk) = tmp;
 	}
 	ft_printf("sa\n");
 }

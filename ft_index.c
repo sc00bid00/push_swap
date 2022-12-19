@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 12:36:30 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 13:30:34 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 14:58:38 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ft_swapbk(t_stk	**stk)
 			tmp = tmp0->next;
 		while (tmp)
 		{
-			if(tmp0->oix > tmp->oix)
+			if (tmp0->oix > tmp->oix)
 				ft_swap(tmp0, tmp);
 			tmp = tmp->next;
 		}
