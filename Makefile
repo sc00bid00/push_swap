@@ -6,7 +6,7 @@
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/19 14:49:41 by lsordo           ###   ########.fr        #
+#    Updated: 2022/12/19 15:13:57 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,9 @@ SRC =	ft_init.c\
 		pa.c\
 		pb.c\
 		sa.c\
+		ra.c\
+		rb.c\
+		rra.c\
 		push_swap.c
 
 OBJ =	$(SRC:.c=.o)

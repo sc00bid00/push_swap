@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 14:57:38 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 15:13:32 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,8 @@ void	pb(t_stk **stb, t_stk **sta);
 void	sa(t_stk **stk);
 void	sb(t_stk **stk);
 void	ss(t_stk **sta, t_stk **stb);
+void	ra(t_stk **sta);
+void	rb(t_stk **stb);
+void	rra(t_stk **sta);
+
 #endif
