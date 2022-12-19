@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 17:03:17 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 10:26:21 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 11:09:38 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ void	ft_abort(char **arr, t_stk **arg)
 void	ft_isdble(t_stk *arg)
 {
 	t_stk	*tmp;
+	t_stk	*tmp0;
 
+	tmp0 = arg;
 	while (arg)
 	{
 		tmp = arg;
@@ -32,7 +34,7 @@ void	ft_isdble(t_stk *arg)
 			tmp = tmp->next;
 			if (arg->num == tmp->num)
 			{
-				ft_freearg(&arg);
+				ft_freearg(&tmp0);
 				ft_printf("Error\n");
 				exit(0);
 			}
@@ -41,7 +43,7 @@ void	ft_isdble(t_stk *arg)
 	}
 }
 
-void	ft_iserr(int i, char **arr)
+void	ft_iserr(int i, char **arr, t_stk **arg)
 {
 	char	*s;
 	int		j;
@@ -55,6 +57,8 @@ void	ft_iserr(int i, char **arr)
 			|| (ft_atoi(s) < 0 && s[0] != '-'))
 		{
 			ft_freear(arr);
+			if (arg)
+				ft_freearg(arg);
 			ft_printf("Error\n");
 			exit(0);
 		}
@@ -66,7 +70,7 @@ void	ft_makenw(int j, char **arr, t_stk **arg)
 {
 	t_stk	*tmp;
 
-	ft_iserr(j, arr);
+	ft_iserr(j, arr, arg);
 	if (*arg == NULL)
 	{
 		*arg = malloc(sizeof(t_stk));
