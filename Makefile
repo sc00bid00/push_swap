@@ -6,7 +6,7 @@
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/19 16:53:23 by lsordo           ###   ########.fr        #
+#    Updated: 2022/12/19 17:47:21 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,9 +23,12 @@ SRC =	ft_init.c\
 		ra.c\
 		rb.c\
 		rra.c\
+		rrb.c\
+		rrr.c\
 		ft_defclt.c\
 		ft_pregrp.c\
-		ft_idntty.c\
+		ft_idntt.c\
+		ft_stksize.c\
 		push_swap.c
 
 OBJ =	$(SRC:.c=.o)

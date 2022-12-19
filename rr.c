@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 15:07:45 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 15:08:51 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 19:04:30 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,28 @@
 
 void	rr(t_stk **sta, t_stk **stb)
 {
-	ra(sta);
-	rb(stb);
+	t_stk	*head;
+	t_stk	*tail;
+
+	if (ft_stksize(*sta, NULL) > 1)
+	{
+		head = *sta;
+		tail = *sta;
+		while (tail->next)
+			tail = tail->next;
+		*sta = (*sta)->next;
+		tail->next = head;
+		head->next = NULL;
+	}
+	if (ft_stksize(*stb, NULL) > 1)
+	{
+		head = *stb;
+		tail = *stb;
+		while (tail->next)
+			tail = tail->next;
+		*stb = (*stb)->next;
+		tail->next = head;
+		head->next = NULL;
+	}
 	ft_printf("rr\n");
 }

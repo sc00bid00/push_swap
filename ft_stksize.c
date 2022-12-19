@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_idntty.c                                        :+:      :+:    :+:   */
+/*   ft_stksize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 16:46:11 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 16:51:49 by lsordo           ###   ########.fr       */
+/*   Created: 2022/12/19 17:21:16 by lsordo            #+#    #+#             */
+/*   Updated: 2022/12/19 18:39:27 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_idntty(t_stk **sta, t_var *var)
+int	ft_stksize(t_stk *stk, t_var *var)
 {
-	int		idnt;
-	t_stk	*tmp;
+	int	i;
 
-	idnt = 1;
-	tmp = *sta;
-	while (tmp)
+	i = 0;
+	while (stk)
 	{
-		if(tmp->six != tmp->oix)
-		{
-			idnt = 0;
-			break;
-		}
-		tmp = tmp->next;
+		stk = stk->next;
+		i++;
 	}
-	if (idnt)
-	{
-		ft_freearg(sta);
-		free(var);
-		exit(0);
-	}
+	if (var != NULL)
+		var->staz = i;
+	return (i);
 }

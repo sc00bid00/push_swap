@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 16:53:10 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 19:13:13 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,16 @@ typedef struct s_stk
 
 typedef struct s_var
 {
-	int		idnt;
 	int		staz;
-	int		stah;
+	int		stbz;
+	int		clpr;
 	int		clnb;
 	int		clsz;
+	int		cl1f;
+	int		cl1t;
+	int		cl2t;
+	int		cpst;
+	int		msg;
 }			t_var;
 
 void	ft_prtstk(t_stk	*sta, t_stk *stb);
@@ -44,8 +49,11 @@ void	sb(t_stk **stk);
 void	ss(t_stk **sta, t_stk **stb);
 void	ra(t_stk **sta);
 void	rb(t_stk **stb);
-void	rra(t_stk **sta);
+void	rra(t_stk **sta, int msg);
+void	rrb(t_stk **stb, int msg);
+void	rrr(t_stk **sta, t_stk **stb);
 void	ft_defclt(t_var *var);
 void	ft_pregrp(t_stk **sta, t_stk **stb, t_var *var);
-void	ft_idntty(t_stk **sta, t_var *var);
+void	ft_idntt(t_stk **sta, t_var *var);
+int		ft_stksize(t_stk *stk, t_var *var);
 #endif

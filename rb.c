@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 15:06:38 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 15:07:03 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 19:01:12 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,15 @@ void	rb(t_stk **stb)
 	t_stk	*head;
 	t_stk	*tail;
 
-	head = *stb;
-	tail = *stb;
-	while (tail->next)
-		tail = tail->next;
-	*stb = (*stb)->next;
-	tail->next = head;
-	head->next = NULL;
-	ft_printf("rb\n");
+	if (ft_stksize(*stb, NULL) > 1)
+	{
+		head = *stb;
+		tail = *stb;
+		while (tail->next)
+			tail = tail->next;
+		*stb = (*stb)->next;
+		tail->next = head;
+		head->next = NULL;
+		ft_printf("rb\n");
+	}
 }

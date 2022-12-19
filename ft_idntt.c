@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ra.c                                               :+:      :+:    :+:   */
+/*   ft_idntt.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 15:00:03 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 19:02:42 by lsordo           ###   ########.fr       */
+/*   Created: 2022/12/19 16:46:11 by lsordo            #+#    #+#             */
+/*   Updated: 2022/12/19 17:24:39 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(t_stk **sta)
+void	ft_idntt(t_stk **sta, t_var *var)
 {
-	t_stk	*head;
-	t_stk	*tail;
+	int		idnt;
+	t_stk	*tmp;
 
-	if (ft_stksize(*sta, NULL) > 1)
+	idnt = 1;
+	tmp = *sta;
+	while (tmp)
 	{
-		head = *sta;
-		tail = *sta;
-		while (tail->next)
-			tail = tail->next;
-		*sta = (*sta)->next;
-		tail->next = head;
-		head->next = NULL;
-		ft_printf("ra\n");
+		if(tmp->six != tmp->oix)
+		{
+			idnt = 0;
+			break;
+		}
+		tmp = tmp->next;
+	}
+	if (idnt)
+	{
+		ft_freearg(sta);
+		free(var);
+		exit(0);
 	}
 }
