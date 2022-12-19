@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 17:03:17 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/18 22:30:19 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 09:33:49 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_abort(char **arr, t_stk **arg)
 	exit(0);
 }
 
-int		ft_isdble(t_stk *arg)
+void	ft_isdble(t_stk *arg)
 {
 	t_stk	*tmp;
 
@@ -31,11 +31,14 @@ int		ft_isdble(t_stk *arg)
 		{
 			tmp = tmp->next;
 			if (arg->num == tmp->num)
-				return(1);
+			{
+				ft_freearg(&arg);
+				ft_printf("Error\n");
+				exit(0);
+			}
 		}
 		arg = arg->next;
 	}
-	return (0);
 }
 
 int		ft_iserr(char *s)
@@ -99,7 +102,7 @@ void	ft_init(int argc, char **argv, t_stk **arg)
 		i++;
 		ft_freear(arr);
 	}
-	if (ft_isdble(*arg))
-		ft_abort(arr, arg);
-
+	ft_isdble(*arg);
+	// if (ft_isdble(*arg))
+	// 	ft_abort(arr, arg);
 }

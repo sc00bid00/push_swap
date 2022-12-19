@@ -6,11 +6,11 @@
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/18 22:24:59 by lsordo           ###   ########.fr        #
+#    Updated: 2022/12/19 09:00:26 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	a
+NAME =	push_swap
 
 SRC =	ft_init.c\
 		ft_prtstk.c\
