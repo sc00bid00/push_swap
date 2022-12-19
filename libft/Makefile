@@ -1,4 +1,3 @@
-CC		=	cc
 AR		=	ar
 CFLAGS	=	-I. -Wall -Wextra -Werror
 NAME	=	libft.a

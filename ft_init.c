@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 17:03:17 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 10:18:31 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 10:26:21 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,28 +41,32 @@ void	ft_isdble(t_stk *arg)
 	}
 }
 
-int	ft_iserr(char *s)
+void	ft_iserr(int i, char **arr)
 {
-	int	j;
+	char	*s;
+	int		j;
 
+	s = arr[i];
 	j = 0;
 	while (s[j])
 	{
 		if ((!ft_isdigit(s[j]) && s[j] != '+' && s[j] != '-')
 			|| (ft_atoi(s) == 0 && s[0] != '0')
 			|| (ft_atoi(s) < 0 && s[0] != '-'))
-			return (1);
+		{
+			ft_freear(arr);
+			ft_printf("Error\n");
+			exit(0);
+		}
 		j++;
 	}
-	return (0);
 }
 
 void	ft_makenw(int j, char **arr, t_stk **arg)
 {
 	t_stk	*tmp;
 
-	if (ft_iserr(arr[j]))
-		ft_abort(arr, arg);
+	ft_iserr(j, arr);
 	if (*arg == NULL)
 	{
 		*arg = malloc(sizeof(t_stk));
