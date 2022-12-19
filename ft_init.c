@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 17:03:17 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 09:33:49 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 10:18:31 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,20 +41,20 @@ void	ft_isdble(t_stk *arg)
 	}
 }
 
-int		ft_iserr(char *s)
+int	ft_iserr(char *s)
 {
 	int	j;
 
 	j = 0;
-		while (s[j])
-		{
-			if ((!ft_isdigit(s[j]) && s[j] != '+' && s[j] != '-')
-				|| (ft_atoi(s) == 0 && s[0] != '0')
-				|| ((ft_atoi(s)) == -1 && s[0] != '-'))
-				return (1);
-			j++;
-		}
-		return (0);
+	while (s[j])
+	{
+		if ((!ft_isdigit(s[j]) && s[j] != '+' && s[j] != '-')
+			|| (ft_atoi(s) == 0 && s[0] != '0')
+			|| (ft_atoi(s) < 0 && s[0] != '-'))
+			return (1);
+		j++;
+	}
+	return (0);
 }
 
 void	ft_makenw(int j, char **arr, t_stk **arg)
@@ -72,13 +72,14 @@ void	ft_makenw(int j, char **arr, t_stk **arg)
 		(*arg)->next = NULL;
 	}
 	else
-	{	tmp = *arg;
-		while(tmp->next)
+	{
+		tmp = *arg;
+		while (tmp->next)
 			tmp = tmp->next;
-		tmp->next=malloc(sizeof(t_stk));
+		tmp->next = malloc(sizeof(t_stk));
 		if (tmp->next == NULL)
 			ft_abort(arr, arg);
-		tmp->next->num=ft_atoi(arr[j]);
+		tmp->next->num = ft_atoi(arr[j]);
 		tmp->next->next = NULL;
 	}
 }
@@ -103,6 +104,4 @@ void	ft_init(int argc, char **argv, t_stk **arg)
 		ft_freear(arr);
 	}
 	ft_isdble(*arg);
-	// if (ft_isdble(*arg))
-	// 	ft_abort(arr, arg);
 }
