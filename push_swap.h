@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 13:30:45 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 14:25:33 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,11 @@ typedef struct s_var
 	int		imin;
 }			t_var;
 
-void	ft_prtstk(t_stk	*arg);
+void	ft_prtstk(t_stk	*sta, t_stk *stb);
 void	ft_init(int argc, char **argv, t_stk **arg);
 void	ft_freear(char **arr);
 void 	ft_freearg(t_stk **arg);
 void	ft_index(t_stk **stk);
+void	pa(t_stk **sta, t_stk **stb);
 
 #endif

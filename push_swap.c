@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 17:02:35 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 14:02:49 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/19 14:27:51 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,12 @@ int main(int argc, char **argv)
 		stb = NULL;
 		ft_init(argc, argv, &sta);
 		ft_index(&sta);
-		ft_prtstk(sta);
+		ft_prtstk(sta, stb);
+		pa(&sta, &stb);
+		pa(&sta, &stb);
+		pa(&sta, &stb);
+		pa(&sta, &stb);
+		ft_prtstk(sta, stb);
 		ft_freearg(&sta);
 	}
 	return (0);
