@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 15:15:25 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 19:10:34 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/20 11:30:55 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	rrb(t_stk **stb, int msg)
 	t_stk	*tail;
 	t_stk	*sndl;
 
-	if (st_stksize(*stb, NULL) > 1)
+	if (ft_stksize(*stb, NULL) > 1)
 	{
 		tail = *stb;
 		while (tail->next)
