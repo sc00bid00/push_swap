@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 08:38:20 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 14:40:44 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/20 13:39:55 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_prtstk(t_stk	*sta, t_stk *stb)
 			sta = sta->next;
 		}
 		else
-			ft_printf("\t\t\t\t");
+			ft_printf("\t\t\t");
 		if (stb)
 		{
 			ft_printf("%d\t%d\t%d\n", stb->oix, stb->six, stb->num);

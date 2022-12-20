@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/20 11:25:59 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/20 12:21:00 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,9 @@ typedef struct s_var
 	int		cl1f;
 	int		cl1t;
 	int		cl2t;
-	int		cpst;
+	int		first;
+	int		last;
+	int		max;
 	int		msg;
 }			t_var;
 
@@ -56,8 +58,8 @@ void	ft_defclt(t_var *var);
 void	ft_pregrp(t_stk **sta, t_stk **stb, t_var *var);
 void	ft_idntt(t_stk **sta, t_var *var);
 int		ft_stksize(t_stk *stk, t_var *var);
-int		ft_isnstk(t_stk *stk, int from, int to);
-int		ft_findfirst(t_stk *stk, int from, int to);
-int		ft_findlast(t_stk *stk, int from, int to);
+int		ft_isnstk(t_stk *stk, t_var	*var);
+int		ft_findfirst(t_stk *stk, t_var *var);
+int		ft_findlast(t_stk *stk, t_var *var);
 
 #endif
