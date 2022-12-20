@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/20 17:25:47 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/20 18:20:03 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,5 @@ int		ft_stksize(t_stk *stk, t_var *var);
 int		ft_isnstk(t_stk *stk, t_var	*var);
 int		ft_findfirst(t_stk *stk, t_var *var);
 int		ft_findlast(t_stk *stk, t_var *var);
-
+void	ft_restack(t_stk **sta, t_stk **stb);
 #endif
