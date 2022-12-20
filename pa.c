@@ -6,27 +6,27 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 14:04:57 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 14:38:09 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/20 16:06:16 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(t_stk **sta, t_stk **stb)
+void	pa(t_stk **stb, t_stk **sta)
 {
 	t_stk	*tmp;
 
-	tmp = *sta;
-	*sta = (*sta)->next;
-	if (!stb)
+	tmp = *stb;
+	*stb = (*stb)->next;
+	if (!sta)
 	{
-		*stb = tmp;
-		(*stb)->next = NULL;
+		*sta = tmp;
+		(*sta)->next = NULL;
 	}
 	else
 	{
-		tmp->next = *stb;
-		*stb = tmp;
+		tmp->next = *sta;
+		*sta = tmp;
 	}
 	ft_printf("pa\n");
 }

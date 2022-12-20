@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 11:07:13 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/20 12:18:33 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/20 17:35:40 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ int	ft_findfirst(t_stk *stk, t_var *var)
 	i = 0;
 	while (stk)
 	{
-		if (stk->six >= var->cl1f && stk->six < var->cl2t)
+		if (stk->six >= var->clstart && stk->six < var->clend)
+		{
 			return (i);
+		}
 		i++;
 		stk = stk->next;
 	}

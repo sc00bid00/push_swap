@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:05:45 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/20 14:24:47 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/20 18:01:05 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,55 +15,52 @@
 void	ft_mvlast(t_stk **sta, t_stk **stb, t_var *var)
 {
 	int	i;
+	int	j;
 
+	j = ft_findlast(*sta, var);
 	i = 0;
-	while (i < ft_findlast(*sta, var))
+	while (i < j)
 	{
 		rra(sta, 1);
 		i++;
 	}
-	ft_printf("Pushing index %d\n", (*sta)->six);
-	pa(sta, stb);
-	rb(stb);
+	pb(sta, stb);
 }
 
 void	ft_mvfirst(t_stk **sta, t_stk **stb, t_var *var)
 {
 	int	i;
+	int	j;
 
+	j = ft_findfirst(*sta, var);
 	i = 0;
-	while (i < ft_findfirst(*sta, var))
+	while (i < j)
 	{
 		ra(sta);
 		i++;
 	}
-	ft_printf("Pushing index %d\n", (*sta)->six);
-	pa(sta, stb);
+	pb(sta, stb);
 }
 
 void	ft_pregrp(t_stk **sta, t_stk **stb, t_var *var)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	while (ft_stksize(*sta, var))
+	while (ft_stksize(*sta, NULL))
 	{
-		var->cl1f = i * var->clsz;
-		var->cl1t = var->cl1f + var->clsz - 1;
-		var->cl2t = var->cl1t + 1 + var->clsz;
-		j = 0;
-		while (j < 2 * var->clsz)
+		var->clstart = i * var->clsize;
+		var->clmid = var->clstart + var->clsize;
+		var->clend = var->clstart + 2 * var->clsize;
+		while(ft_isnstk(*sta, var))
 		{
-			if (ft_isnstk(*sta, var))
-			{
-				if (ft_findfirst(*sta, var) <= ft_findlast(*sta, var))
-					ft_mvfirst(sta, stb, var);
-				else
-					ft_mvlast(sta, stb, var);
-			}
-			j++;
+			if (ft_findfirst(*sta, var) < ft_findlast(*sta, var))
+				ft_mvfirst(sta, stb, var);
+			else
+				ft_mvlast(sta, stb, var);
+			if ((*stb)->six > var->clmid)
+				rb(stb);
 		}
-		i++;
+		i += 2;
 	}
 }
