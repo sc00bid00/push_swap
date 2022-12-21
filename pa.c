@@ -6,13 +6,13 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 14:04:57 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/20 16:06:16 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/21 18:34:02 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(t_stk **stb, t_stk **sta)
+void	pa(t_stk **sta, t_stk **stb)
 {
 	t_stk	*tmp;
 
