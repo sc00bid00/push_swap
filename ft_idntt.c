@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:46:11 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 17:24:39 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/21 10:16:03 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ void	ft_idntt(t_stk **sta, t_var *var)
 	tmp = *sta;
 	while (tmp)
 	{
-		if(tmp->six != tmp->oix)
+		if (tmp->six != tmp->oix)
 		{
 			idnt = 0;
-			break;
+			break ;
 		}
 		tmp = tmp->next;
 	}

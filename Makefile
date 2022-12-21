@@ -6,7 +6,7 @@
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/20 18:20:30 by lsordo           ###   ########.fr        #
+#    Updated: 2022/12/21 15:32:14 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRC =	ft_init.c\
 		pa.c\
 		pb.c\
 		sa.c\
+		sb.c\
 		ra.c\
 		rb.c\
 		rra.c\
@@ -32,7 +33,9 @@ SRC =	ft_init.c\
 		ft_findfirst.c\
 		ft_findlast.c\
 		ft_isnstk.c\
-		ft_restack.c\
+		ft_restack2.c\
+		ft_pushhead.c\
+		ft_pushtail.c\
 		push_swap.c
 
 OBJ =	$(SRC:.c=.o)

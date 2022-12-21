@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:05:45 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/20 18:01:05 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/21 15:54:13 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ void	ft_mvlast(t_stk **sta, t_stk **stb, t_var *var)
 		i++;
 	}
 	pb(sta, stb);
+	if ((*stb)->six < last->six)
+	{
+		rrb(stb, 1);
+		sb()
+	}
 }
 
 void	ft_mvfirst(t_stk **sta, t_stk **stb, t_var *var)
@@ -40,6 +45,8 @@ void	ft_mvfirst(t_stk **sta, t_stk **stb, t_var *var)
 		i++;
 	}
 	pb(sta, stb);
+	if ((*stb)->next && (*stb)->six < (*stb)->next->six)
+		sb(stb);
 }
 
 void	ft_pregrp(t_stk **sta, t_stk **stb, t_var *var)
@@ -52,7 +59,7 @@ void	ft_pregrp(t_stk **sta, t_stk **stb, t_var *var)
 		var->clstart = i * var->clsize;
 		var->clmid = var->clstart + var->clsize;
 		var->clend = var->clstart + 2 * var->clsize;
-		while(ft_isnstk(*sta, var))
+		while (ft_isnstk(*sta, var))
 		{
 			if (ft_findfirst(*sta, var) < ft_findlast(*sta, var))
 				ft_mvfirst(sta, stb, var);

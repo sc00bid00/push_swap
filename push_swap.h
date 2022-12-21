@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/21 08:33:24 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/21 14:02:18 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,10 @@ typedef struct s_var
 	int		last;
 	int		maxn;
 	int		maxp;
+	int		maxn2;
+	int		maxp2;
+	int		maxph;
+	int		maxp2h;
 }			t_var;
 
 void	ft_prtstk(t_stk	*sta, t_stk *stb);
@@ -62,4 +66,6 @@ int		ft_isnstk(t_stk *stk, t_var	*var);
 int		ft_findfirst(t_stk *stk, t_var *var);
 int		ft_findlast(t_stk *stk, t_var *var);
 void	ft_restack(t_stk **sta, t_stk **stb, t_var *var);
+void	ft_pushhead(t_stk **sta, t_stk **stb, t_var *var);
+void	ft_pushtail(t_stk **sta, t_stk **stb, t_var *var);
 #endif
