@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/22 09:07:48 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/22 13:41:49 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,14 @@ typedef struct s_var
 	int		clmid;
 	int		min;
 	int		minp;
-	int		rmin;
-	int		last;
 	int		maxn;
 	int		maxp;
 	int		maxn2;
 	int		maxp2;
-	int		maxph;
-	int		maxp2h;
+	int		cph;
+	int		cph2;
+	int		cpt;
+	int		cpt2;
 }			t_var;
 
 void	ft_prtstk(t_stk	*sta, t_stk *stb);
@@ -69,8 +69,7 @@ int		ft_isnstk(t_stk *stk, t_var	*var);
 int		ft_findfirst(t_stk *stk, t_var *var);
 int		ft_findlast(t_stk *stk, t_var *var);
 void	ft_restack(t_stk **sta, t_stk **stb, t_var *var);
-void	ft_pushhead(t_stk **sta, t_stk **stb, t_var *var);
-void	ft_pushtail(t_stk **sta, t_stk **stb, t_var *var);
 void	ft_simple(t_stk **sta, t_stk **stb, t_var *var);
+void	ft_getmaxv(t_stk *stk, t_var *var);
 
 #endif
