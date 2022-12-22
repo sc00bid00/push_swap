@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 13:23:52 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/22 14:17:28 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/22 17:49:08 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,24 +20,12 @@ void	ft_getmaxp(t_stk *stk, t_var *var)
 	tmp = stk;
 	i = 0;
 	var->maxp = i;
-	var->maxp2 = i;
 	while (tmp->next)
 	{
 		tmp = tmp->next;
 		i++;
 		if (tmp->six == var->maxn)
 			var->maxp = i;
-		if (tmp->six == var->maxn2)
-			var->maxp2 = i;
-	}
-	tmp = stk;
-	i = 0;
-	while (tmp->next)
-	{
-		if (tmp->six == var->maxn2)
-			var->maxp2 = i;
-		tmp = tmp->next;
-		i++;
 	}
 }
 
@@ -45,23 +33,20 @@ void	ft_getmaxv(t_stk *stk, t_var *var)
 {
 	t_stk	*tmp;
 
-	tmp = stk;
-	if(tmp)
+	if(stk)
 	{
+		tmp = stk;
 		var->maxn = tmp->six;
-		var->maxn2 = tmp->six;
 		while (tmp->next)
 		{
 			tmp = tmp->next;
 			if (tmp->six > var->maxn)
 				var->maxn = tmp->six;
 		}
-		while (tmp->next)
-		{
-			tmp = tmp->next;
-			if (tmp->six < var->maxn2 && tmp->six != var->maxn)
-				var->maxn2 = tmp->six;
-		}
+		if(var->maxn > 1)
+			var->maxn2 = var->maxn - 1;
+		if(var->maxn > 2)
+			var->maxn3 = var->maxn - 2;
 	}
 	ft_getmaxp(stk, var);
 }

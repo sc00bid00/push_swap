@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/22 13:41:49 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/22 18:50:49 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,10 @@ typedef struct s_var
 	int		min;
 	int		minp;
 	int		maxn;
-	int		maxp;
 	int		maxn2;
-	int		maxp2;
-	int		cph;
-	int		cph2;
-	int		cpt;
-	int		cpt2;
+	int		maxn3;
+	int		maxp;
+	int		kllr;
 }			t_var;
 
 void	ft_prtstk(t_stk	*sta, t_stk *stb);

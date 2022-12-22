@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 15:54:52 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/21 15:36:32 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/22 17:44:19 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_defclt(t_var *var)
 	else if (var->staz >= 50 && var->staz < 500)
 		var->clpar = 7;
 	else if (var->staz >= 500 && var->staz <= 1000)
-		var->clpar = 18;
+		var->clpar = 17;
 	else
 		var->clpar = 100;
 	var->clsize = var->staz / var->clpar;
