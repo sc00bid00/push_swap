@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/21 17:37:38 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/22 09:07:48 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,11 @@ typedef struct s_var
 	int		clnum;
 	int		clsize;
 	int		clstart;
-	int		clmid;
 	int		clend;
-	int		first;
+	int		clmid;
+	int		min;
+	int		minp;
+	int		rmin;
 	int		last;
 	int		maxn;
 	int		maxp;

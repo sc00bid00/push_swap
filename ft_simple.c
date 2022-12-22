@@ -6,68 +6,53 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 16:48:42 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/21 19:18:52 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/22 10:00:20 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_posmin(t_stk	*sta)
+void	ft_minp(t_stk *sta, t_var *var)
 {
 	int		i;
-	int		minp;
-	int		minn;
 	t_stk	*tmp;
 
 	tmp = sta;
+	var->staz = ft_stksize(tmp, NULL);
 	i = 0;
-	minn = tmp->six;
+	var->min = tmp->six;
+	var->minp = i;
 	while (tmp->next)
 	{
-		if (tmp->six < minn)
-		{
-			minn = tmp->six;
-			minp = i;
-		}
-		i++;
 		tmp = tmp->next;
+		i++;
+		if (tmp->six < var->min)
+		{
+			var->minp = i;
+			var->min = tmp->six;
+		}
 	}
-	return (i);
 }
 
-void	ft_pushmin(t_stk **sta, t_stk **stb)
+void	ft_pushmin(t_stk **sta, t_stk **stb, t_var *var)
 {
-	int	minp;
 	int	i;
 
-	minp = ft_posmin(*sta);
+	ft_minp(*sta, var);
 	i = 0;
-	if (minp <= ft_stksize(*sta, NULL) / 2)
+	if (var->minp <= var->staz / 2)
+	while (i < var->minp)
 	{
-		while (i < minp)
-		{
-			ra(sta);
-			i++;
-		}
+		ra(sta);
+		i++;
 	}
 	else
+	while (i < var->staz - var->minp)
 	{
-		ft_printf("i %d minp %d pos %d\n", i, minp,ft_stksize(*sta, NULL) - minp);
-		while (i < ft_stksize(*sta, NULL) - minp)
-		{
-			rra(sta, 1);
-			i++;
-		}
+		rra(sta, 1);
+		i++;
 	}
 	pb(stb, sta);
-}
-
-void	ft_simple5(t_stk **sta, t_stk **stb)
-{
-	while (ft_stksize(*sta, NULL) > 1)
-		ft_pushmin(sta, stb);
-	while (ft_stksize(*stb, NULL))
-		pa(sta, stb);
 }
 
 void	ft_simple3(t_stk **sta)
@@ -100,5 +85,12 @@ void	ft_simple(t_stk **sta, t_stk **stb, t_var *var)
 	if (var->staz < 4)
 		ft_simple3(sta);
 	else
-		ft_simple5(sta, stb);
+	{
+		while (ft_stksize(*sta, NULL) > 2)
+			ft_pushmin(sta, stb, var);
+		if ((*sta)->six > (*sta)->next->six)
+			sa(sta);
+		while (ft_stksize(*stb, NULL))
+			pa(sta, stb);
+	}
 }
