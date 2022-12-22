@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 11:12:15 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/20 17:59:55 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/22 10:45:31 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	ft_findlast(t_stk *stk, t_var *var)
 	int		i;
 	int		j;
 	t_stk	*tmp;
-
 	tmp = stk;
 	i = 0;
 	j = 0;

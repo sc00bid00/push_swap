@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 11:54:13 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/21 12:06:03 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/22 10:57:14 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_pushtail(t_stk **sta, t_stk **stb, t_var *var)
 		i++;
 		rrb(stb, 1);
 	}
-	pa(stb, sta);
+	pa(sta, stb);
 	if ((*sta)->next && (*sta)->six > (*sta)->next->six)
 		sa(sta);
 }

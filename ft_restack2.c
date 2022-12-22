@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 11:42:46 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/21 15:46:10 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/22 10:57:03 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_pushtail2(t_stk **sta, t_stk **stb, t_var *var)
 		i++;
 		rrb(stb, 1);
 	}
-	pa(stb, sta);
+	pa(sta, stb);
 }
 
 void	ft_pushhead2(t_stk **sta, t_stk **stb, t_var *var)
@@ -38,7 +38,7 @@ void	ft_pushhead2(t_stk **sta, t_stk **stb, t_var *var)
 		i++;
 		rb(stb);
 	}
-	pa(stb, sta);
+	pa(sta, stb);
 	if ((*sta)->next && (*sta)->six > (*sta)->next->six)
 		sa(sta);
 }

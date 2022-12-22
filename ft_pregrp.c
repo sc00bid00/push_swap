@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:05:45 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/21 16:44:13 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/22 10:51:19 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ void	ft_mvlast(t_stk **sta, t_stk **stb, t_var *var)
 		rra(sta, 1);
 		i++;
 	}
-	pb(sta, stb);
+	// pb(sta, stb);
+	pb(stb, sta);
 }
 
 void	ft_mvfirst(t_stk **sta, t_stk **stb, t_var *var)
 {
 	int	i;
 	int	j;
-
 	j = ft_findfirst(*sta, var);
 	i = 0;
 	while (i < j)
@@ -39,7 +39,8 @@ void	ft_mvfirst(t_stk **sta, t_stk **stb, t_var *var)
 		ra(sta);
 		i++;
 	}
-	pb(sta, stb);
+	// pb(sta, stb);
+	pb(stb, sta);
 	if ((*stb)->next && (*stb)->six < (*stb)->next->six)
 		sb(stb);
 }

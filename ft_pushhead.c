@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 11:53:16 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/21 14:47:48 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/22 10:57:25 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_pushhead(t_stk **sta, t_stk **stb, t_var *var)
 		i++;
 		rb(stb);
 	}
-	pa(stb, sta);
+	pa(sta, stb);
 	if ((*sta)->next && (*sta)->six > (*sta)->next->six)
 		sa(sta);
 }
