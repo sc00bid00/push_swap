@@ -6,13 +6,13 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 14:43:10 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/21 12:04:04 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/23 12:11:10 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_stk **stk)
+void	sa(t_stk **stk, int msg)
 {
 	t_stk	*tmp;
 
@@ -23,5 +23,6 @@ void	sa(t_stk **stk)
 		tmp->next = (*stk);
 		(*stk) = tmp;
 	}
-	ft_printf("sa\n");
+	if (msg)
+		ft_printf("sa\n");
 }

@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 11:42:46 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/22 21:12:15 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/23 07:36:28 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,11 @@ void	ft_pushmax2(t_stk **sta, t_stk **stb, t_var *var)
 
 void	ft_restack(t_stk **sta, t_stk **stb, t_var *var)
 {
-	var->kllr = 0;
-	var->allow = 0;
 	while (ft_stksize(*stb, NULL))
 	{
 		ft_getmaxv(*stb, var);
+		var->kllr = 0;
+		var->allow = 0;
 		if (var->maxp <= ft_stksize(*stb, NULL) / 2)
 		{
 			while ((*stb)->six < var->maxn && (*stb)->six < var->maxn2

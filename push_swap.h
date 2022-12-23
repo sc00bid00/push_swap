@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/22 20:53:53 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/23 12:10:47 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,7 @@ typedef struct s_var
 	int		maxn2;
 	int		maxn3;
 	int		maxp;
-	int		kllr;
-	int		allow;
+	int		cllr;
 }			t_var;
 
 void	ft_prtstk(t_stk	*sta, t_stk *stb);
@@ -50,8 +49,8 @@ void	ft_freearg(t_stk **arg);
 void	ft_index(t_stk **stk, t_var *var);
 void	pa(t_stk **sta, t_stk **stb);
 void	pb(t_stk **stb, t_stk **sta);
-void	sa(t_stk **stk);
-void	sb(t_stk **stk);
+void	sa(t_stk **stk, int msg);
+void	sb(t_stk **stk, int msg);
 void	ss(t_stk **sta, t_stk **stb);
 void	ra(t_stk **sta);
 void	rb(t_stk **stb);
