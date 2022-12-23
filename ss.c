@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 14:55:42 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 14:56:52 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/23 13:23:05 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ss(t_stk **sta, t_stk **stb)
 {
-	sa(sta);
-	sb(stb);
+	sa(sta, 0);
+	sb(stb, 0);
 	ft_printf("ss\n");
 }
