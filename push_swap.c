@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 17:02:35 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/22 18:06:25 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/26 16:19:03 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(int argc, char **argv)
 	t_stk	*stb;
 	t_var	*var;
 
-	if (argc > 1)
+	if (argc > 2)
 	{
 		sta = NULL;
 		stb = NULL;
