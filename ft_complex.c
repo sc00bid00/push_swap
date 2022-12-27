@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 16:08:34 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/27 16:53:36 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/27 18:42:09 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 void	ft_realrun(t_stk **sta, t_stk **stb, t_var *var)
 {
 	var->prt = 1;
-	ft_init(var->argc, var->argv, sta);
-	ft_index(sta, var);
+	ft_reset(sta, stb, var);
 	ft_defclt(var);
 	ft_pregrp(sta, stb, var);
 	ft_restack(sta, stb, var);
@@ -33,8 +32,7 @@ void	ft_mngh(t_stk **sta, t_stk **stb, t_var *var)
 		ft_restack(sta, stb, var);
 		if (var->scr <= 700)
 			break ;
-		ft_init(var->argc, var->argv, sta);
-		ft_index(sta, var);
+		ft_reset(sta, stb, var);
 		var->clpar++;
 	}
 	ft_realrun(sta, stb, var);
@@ -51,12 +49,7 @@ void	ft_mngfh(t_stk **sta, t_stk **stb, t_var *var)
 		ft_restack(sta, stb, var);
 		if (var->scr <= 5500)
 			break ;
-		ft_freearg(sta);
-		ft_freearg(stb);
-		sta = NULL;
-		stb = NULL;
-		ft_init(var->argc, var->argv, sta);
-		ft_index(sta, var);
+		ft_reset(sta, stb, var);
 		var->clpar++;
 	}
 	ft_realrun(sta, stb, var);
@@ -77,4 +70,6 @@ void	ft_complex(t_stk **sta, t_stk **stb, t_var *var)
 		ft_restack(sta, stb, var);
 		ft_realrun(sta, stb, var);
 	}
+
+
 }
