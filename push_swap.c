@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 17:02:35 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/27 15:41:52 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/27 16:42:35 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,12 @@ int	main(int argc, char **argv)
 		var->prt = 0;
 		ft_index(&sta, var);
 		ft_idntt(&sta, var);
+		var->argc = argc;
+		var->argv = argv;
 		if (var->staz < 6)
 			ft_simple(&sta, &stb, var);
 		else
-		{
-			ft_defclt(var);
-			ft_pregrp(&sta, &stb, var);
-			ft_restack(&sta, &stb, var);
-		}
+			ft_complex(&sta, &stb, var);
 		ft_freearg(&sta);
 		free(var);
 	}

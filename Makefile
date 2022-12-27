@@ -6,7 +6,7 @@
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/27 08:43:48 by lsordo           ###   ########.fr        #
+#    Updated: 2022/12/27 16:23:40 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ SRC =	ft_init.c\
 		ft_restack4.c\
 		ft_simple.c\
 		ft_getmaxv.c\
+		ft_complex.c\
 		push_swap.c
 
 OBJ =	$(SRC:.c=.o)
