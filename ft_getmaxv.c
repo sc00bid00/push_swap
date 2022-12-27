@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 13:23:52 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/26 20:45:39 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/27 09:39:30 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,8 @@ void	ft_getmaxv(t_stk *stk, t_var *var)
 			if (tmp->six > var->maxn)
 				var->maxn = tmp->six;
 		}
-		if(var->maxn > 1)
-			var->maxn2 = var->maxn - 1;
-		if(var->maxn > 2)
-			var->maxn3 = var->maxn - 2;
+		var->maxn2 = var->maxn - 1;
+		var->maxn3 = var->maxn - 2;
 	}
 	ft_getmaxp(stk, var);
 }
