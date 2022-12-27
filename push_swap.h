@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/27 12:01:32 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/27 15:59:12 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ typedef struct s_var
 	int		maxn3;
 	int		maxp;
 	int		cllr;
-	int		skip;
 	int		scr;
+	int		prt;
 }			t_var;
 
 void	ft_prtstk(t_stk	*sta, t_stk *stb);
@@ -49,17 +49,17 @@ void	ft_init(int argc, char **argv, t_stk **arg);
 void	ft_freear(char **arr);
 void	ft_freearg(t_stk **arg);
 void	ft_index(t_stk **stk, t_var *var);
-void	pa(t_stk **sta, t_stk **stb);
-void	pb(t_stk **stb, t_stk **sta);
-void	sa(t_stk **stk, int msg);
-void	sb(t_stk **stk, int msg);
-void	ss(t_stk **sta, t_stk **stb);
-void	ra(t_stk **sta);
-void	rb(t_stk **stb);
-void	rr(t_stk **sta, t_stk **stb);
-void	rra(t_stk **sta, int msg);
-void	rrb(t_stk **stb, int msg);
-void	rrr(t_stk **sta, t_stk **stb);
+void	pa(t_stk **sta, t_stk **stb, t_var *var);
+void	pb(t_stk **stb, t_stk **sta, t_var *var);
+void	sa(t_stk **stk, int msg, t_var *var);
+void	sb(t_stk **stk, int msg, t_var *var);
+void	ss(t_stk **sta, t_stk **stb, t_var *var);
+void	ra(t_stk **sta, t_var *var);
+void	rb(t_stk **stb, t_var *var);
+void	rr(t_stk **sta, t_stk **stb, t_var *var);
+void	rra(t_stk **sta, int msg, t_var *var);
+void	rrb(t_stk **stb, int msg, t_var *var);
+void	rrr(t_stk **sta, t_stk **stb, t_var *var);
 void	ft_defclt(t_var *var);
 void	ft_pregrp(t_stk **sta, t_stk **stb, t_var *var);
 void	ft_idntt(t_stk **sta, t_var *var);

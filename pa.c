@@ -6,13 +6,13 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 14:04:57 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/21 18:34:02 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/27 15:48:56 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(t_stk **sta, t_stk **stb)
+void	pa(t_stk **sta, t_stk **stb, t_var *var)
 {
 	t_stk	*tmp;
 
@@ -28,5 +28,7 @@ void	pa(t_stk **sta, t_stk **stb)
 		tmp->next = *sta;
 		*sta = tmp;
 	}
-	ft_printf("pa\n");
+	var->scr++;
+	if (var->prt)
+		ft_printf("pa\n");
 }
