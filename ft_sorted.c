@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 13:22:44 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/28 13:24:28 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 15:35:31 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,21 @@
 int	ft_sorted(t_stk	*stk)
 {
 	int		idnt;
+	int		num;
 	t_stk	*tmp;
 
 	idnt = 1;
 	tmp = stk;
-	while (tmp)
+	num = tmp->six;
+	while (tmp->next)
 	{
-		if (tmp->six != tmp->oix)
+		tmp = tmp->next;
+		if (num > tmp->six)
 		{
 			idnt = 0;
 			break ;
 		}
-		tmp = tmp->next;
+		num = tmp->six;
 	}
 	return (idnt);
 }

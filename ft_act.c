@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 13:31:09 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/28 13:45:25 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 16:14:10 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,28 @@
 
 void	ft_act(t_stk **sta, t_stk **stb, t_var *var)
 {
-	if (!ft_strncmp("pa", var->cmd, 2))
+	if (!ft_strncmp("pa\n", var->cmd, 10))
 		pa(sta, stb, var);
-	else if (!ft_strncmp("pb", var->cmd, 2))
-		pb(sta, stb, var);
-	else if (!ft_strncmp("sa", var->cmd, 2))
+	else if (!ft_strncmp("pb\n", var->cmd, 10))
+		pb(stb, sta, var);
+	else if (!ft_strncmp("sa\n", var->cmd, 10))
 		sa(sta, 0, var);
-	else if (!ft_strncmp("sb", var->cmd, 2))
+	else if (!ft_strncmp("sb\n", var->cmd, 10))
 		sb(stb, 0, var);
-	else if (!ft_strncmp("ss", var->cmd, 2))
+	else if (!ft_strncmp("ss\n", var->cmd, 10))
 		ss(sta, stb, var);
-	else if (!ft_strncmp("ra", var->cmd, 2))
+	else if (!ft_strncmp("ra\n", var->cmd, 10))
 		ra(sta, var);
-	else if (!ft_strncmp("rb", var->cmd, 2))
+	else if (!ft_strncmp("rb\n", var->cmd, 10))
 		rb(stb, var);
-	else if (!ft_strncmp("rr", var->cmd, 2))
+	else if (!ft_strncmp("rr\n", var->cmd, 10))
 		rr(sta, stb, var);
-	else if (!ft_strncmp("rra", var->cmd, 3))
+	else if (!ft_strncmp("rra\n", var->cmd, 10))
 		rra(sta, 0, var);
-	else if (!ft_strncmp("rrb", var->cmd, 3))
+	else if (!ft_strncmp("rrb\n", var->cmd, 10))
 		rrb(stb, 0, var);
-	else if (!ft_strncmp("rrr", var->cmd, 3))
+	else if (!ft_strncmp("rrr\n", var->cmd, 10))
 		rrr(sta, stb, var);
 	else
-		ft_checkfail(sta, stb, var);
+		ft_checkfail(sta, stb, var, "Error\n");
 }

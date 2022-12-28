@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 13:08:41 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/28 14:04:22 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 16:12:06 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,16 @@
 
 void	ft_getcmds(t_stk **sta, t_stk **stb, t_var *var)
 {
-	while (var->cmd)
+	while (1)
 	{
 		var->cmd = get_next_line(0);
-		if (!var->cmd)
+		if (var->cmd)
 			ft_act(sta, stb, var);
+		else
+			break ;
 	}
-	if (ft_stksize(*stb, NULL) != 0 && !ft_sorted(*sta))
-		ft_checkfail(sta, stb, var);
+	if (ft_stksize(*stb, NULL) == 0 && ft_sorted(*sta))
+		ft_printf("OK\n");
 	else
-		ft_printf("OK");
+		ft_checkfail(sta, stb, var, "KO\n");
 }
