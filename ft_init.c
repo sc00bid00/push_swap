@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 17:03:17 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 11:09:38 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 09:45:43 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ void	ft_iserr(int i, char **arr, t_stk **arg)
 	{
 		if ((!ft_isdigit(s[j]) && s[j] != '+' && s[j] != '-')
 			|| (ft_atoi(s) == 0 && s[0] != '0')
-			|| (ft_atoi(s) < 0 && s[0] != '-'))
+			|| (ft_atoi(s) < 0 && s[0] != '-')
+			|| (ft_atoi(s) > 0 && s[0] == '-'))
 		{
 			ft_freear(arr);
 			if (arg)
@@ -102,6 +103,7 @@ void	ft_init(int argc, char **argv, t_stk **arg)
 	while (i < argc)
 	{
 		arr = ft_split(argv[i], ' ');
+		ft_singlein(argc, arr);
 		j = 0;
 		while (arr[j])
 		{

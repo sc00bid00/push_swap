@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/28 08:20:38 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 09:46:03 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ void	ft_simple(t_stk **sta, t_stk **stb, t_var *var);
 void	ft_getmaxv(t_stk *stk, t_var *var);
 void	ft_complex(t_stk **sta, t_stk **stb, t_var *var);
 void	ft_reset(t_stk **sta, t_stk **stb, t_var *var);
+void	ft_singlein(int argc, char **arr);
 
 #endif

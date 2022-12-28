@@ -4,7 +4,7 @@ GREEN="\033[32m"
 ENDCOLOR="\033[0m"
 echo -e "Sample size ?"
 read SIZE
-if (($SIZE < 500))
+if (($SIZE < 101))
 then
 	TH=700
 else
