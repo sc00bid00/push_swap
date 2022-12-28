@@ -2,16 +2,25 @@
 RED="\033[31m"
 GREEN="\033[32m"
 ENDCOLOR="\033[0m"
-
+echo -e "Sample size ?"
+read SIZE
+if (($SIZE < 500))
+then
+	TH=700
+else
+	TH=5500
+fi
+echo -e "Test runs?"
+read RUNS
 echo "" > arguments.txt
 echo -e "#\t    Kicks\tSorted"
 echo "-------------------------------"
-for i in $(seq 1 100)
+for i in $(seq 1 $RUNS)
 do
-	ARG=$(seq -500 500 | sort -R | head -500 | tr "\n" " ")
+	ARG=$(seq -$SIZE $SIZE | sort -R | head -$SIZE | tr "\n" " ")
 	VAR=$(./push_swap $ARG | wc -l)
 	CHK=$(./push_swap $ARG | ./checker $ARG)
-	if (($VAR <= 5500)) && (($CHK == "OK"))
+	if (($VAR <= $TH)) && (($CHK == "OK"))
 	then
 		echo -e "${GREEN}$i\t$VAR OK\t$CHK${ENDCOLOR}"
 	else

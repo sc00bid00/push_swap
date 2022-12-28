@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 16:08:34 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/27 18:42:09 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 08:18:43 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_realrun(t_stk **sta, t_stk **stb, t_var *var)
 {
+
 	var->prt = 1;
 	ft_reset(sta, stb, var);
 	ft_defclt(var);
@@ -59,9 +60,11 @@ void	ft_complex(t_stk **sta, t_stk **stb, t_var *var)
 {
 	if (var->staz < 50)
 		var->clpar = 2;
-	if (var->staz >=50 && var->staz < 150)
+	else if (var->staz >=50 && var->staz < 150)
+	{
 		ft_mngh(sta, stb, var);
-	if (var->staz >= 150 && var->staz < 600)
+	}
+	else if (var->staz >= 150 && var->staz < 600)
 		ft_mngfh(sta, stb, var);
 	else
 	{
@@ -70,6 +73,4 @@ void	ft_complex(t_stk **sta, t_stk **stb, t_var *var)
 		ft_restack(sta, stb, var);
 		ft_realrun(sta, stb, var);
 	}
-
-
 }

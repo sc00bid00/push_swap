@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 16:48:42 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/27 16:04:10 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 08:23:16 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,20 @@ void	ft_pushmin(t_stk **sta, t_stk **stb, t_var *var)
 	ft_minp(*sta, var);
 	i = 0;
 	if (var->minp <= var->staz / 2)
-	while (i < var->minp)
 	{
-		ra(sta, var);
-		i++;
+		while (i < var->minp)
+		{
+			ra(sta, var);
+			i++;
+		}
 	}
 	else
-	while (i < var->staz - var->minp)
 	{
-		rra(sta, 1, var);
-		i++;
+		while (i < var->staz - var->minp)
+		{
+			rra(sta, 1, var);
+			i++;
+		}
 	}
 	pb(stb, sta, var);
 }
