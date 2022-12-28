@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:05:45 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/27 16:03:29 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 08:34:36 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	ft_mvfirst(t_stk **sta, t_stk **stb, t_var *var)
 {
 	int	i;
 	int	j;
+
 	j = ft_findfirst(*sta, var);
 	i = 0;
 	while (i < j)

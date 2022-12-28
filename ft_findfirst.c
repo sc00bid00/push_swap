@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 11:07:13 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/22 10:44:55 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 08:35:57 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 int	ft_findfirst(t_stk *stk, t_var *var)
 {
 	int	i;
+
 	i = 0;
 	while (stk)
 	{

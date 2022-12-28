@@ -6,7 +6,7 @@
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/28 07:11:52 by lsordo           ###   ########.fr        #
+#    Updated: 2022/12/28 08:33:45 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ SRC =	ft_init.c\
 		ft_findfirst.c\
 		ft_findlast.c\
 		ft_isnstk.c\
-		ft_restack4.c\
+		ft_restack.c\
 		ft_simple.c\
 		ft_getmaxv.c\
 		ft_complex.c\
