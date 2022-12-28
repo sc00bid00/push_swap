@@ -6,11 +6,13 @@
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/28 09:39:19 by lsordo           ###   ########.fr        #
+#    Updated: 2022/12/28 13:46:32 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =	push_swap
+
+NAME_B = checker
 
 SRC =	ft_init.c\
 		ft_prtstk.c\
@@ -43,7 +45,17 @@ SRC =	ft_init.c\
 		ft_singlein.c\
 		push_swap.c
 
+SRC_B =	get_next_line.c\
+		get_next_line_utils.c\
+		ft_sorted.c\
+		ft_getcmds.c\
+		ft_checkfail.c\
+		ft_act.c\
+		checker.c
+
 OBJ =	$(SRC:.c=.o)
+
+OBJ_B =	$(SRC_B:.c=.o)
 
 LIB =   ./libft/libft.a
 

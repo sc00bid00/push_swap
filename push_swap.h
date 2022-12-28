@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/28 09:46:03 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 13:47:45 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ typedef struct s_var
 	int		prt;
 	int		argc;
 	char	**argv;
+	char	*cmd;
 }			t_var;
 
 void	ft_prtstk(t_stk	*sta, t_stk *stb);
@@ -75,5 +76,9 @@ void	ft_getmaxv(t_stk *stk, t_var *var);
 void	ft_complex(t_stk **sta, t_stk **stb, t_var *var);
 void	ft_reset(t_stk **sta, t_stk **stb, t_var *var);
 void	ft_singlein(int argc, char **arr);
+int		ft_sorted(t_stk	*stk);
+void	ft_checkfail(t_stk **sta, t_stk **stb, t_var *var);
+void	ft_act(t_stk **sta, t_stk **stb, t_var *var);
+void	ft_getcmds(t_stk **sta, t_stk **stb, t_var *var);
 
 #endif
