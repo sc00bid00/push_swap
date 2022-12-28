@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 07:57:14 by lsordo            #+#    #+#             */
-/*   Updated: 2022/11/15 09:55:47 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 14:04:06 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # endif
 
 char	*get_next_line(int fd);
-char	*ft_strjoin(char *s1, char *s2);
+char	*ft_strjoin_m(char *s1, char *s2);
 size_t	ft_strlen(const char *s);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 char	*ft_strchr(const char *s, int c);

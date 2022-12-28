@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 10:27:04 by lsordo            #+#    #+#             */
-/*   Updated: 2022/11/15 09:56:45 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 14:03:37 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	*ft_join(int fd, char *var)
 		if (ret == -1)
 			return (free(var), NULL);
 		buf[ret] = '\0';
-		var = ft_strjoin(var, buf);
+		var = ft_strjoin_m(var, buf);
 		if (var == NULL || *var == '\0')
 			return (free(var), NULL);
 	}

@@ -6,13 +6,13 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 08:38:51 by lsordo            #+#    #+#             */
-/*   Updated: 2022/11/15 09:44:12 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 14:03:42 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin_m(char *s1, char *s2)
 {
 	char	*str;
 	size_t	len;
