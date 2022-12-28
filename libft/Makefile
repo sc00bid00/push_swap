@@ -1,5 +1,5 @@
 AR		=	ar
-CFLAGS	=	-I. -Wall -Wextra -Werror
+CFLAGS	=	-I ../includes -Wall -Wextra -Werror
 NAME	=	libft.a
 SRC		= 	ft_atoi.c\
 			ft_bzero.c\

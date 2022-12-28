@@ -6,11 +6,11 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 16:18:46 by lsordo            #+#    #+#             */
-/*   Updated: 2022/11/02 08:06:58 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 17:17:57 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include	<libft.h>
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {

@@ -6,11 +6,11 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 13:14:01 by lsordo            #+#    #+#             */
-/*   Updated: 2022/10/24 18:21:58 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 17:17:57 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include	<libft.h>
 
 void	ft_putchar_fd(char c, int fd)
 {

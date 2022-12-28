@@ -6,7 +6,7 @@
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/28 16:49:19 by lsordo           ###   ########.fr        #
+#    Updated: 2022/12/28 17:14:27 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,9 +60,13 @@ OBJ =	$(SRC_PS:.c=.o)
 
 OBJ_B =	$(SRC_B:.c=.o)
 
-LIB =   ./libft/libft.a
+SRC_PATH = ./src/
+OBJ_PATH = ./obj/
+HEADER_PATH = ./includes/
 
-CFLAGS = -Wall -Wextra -Werror
+LIB =	./libft/libft.a
+
+CFLAGS = -Wall -Wextra -Werror -I $(HEADER_PATH)
 
 all: $(NAME)
 
@@ -77,7 +81,7 @@ $(NAME_B): $(OBJ_B) $(LIB)
 $(LIB):
 	$(MAKE) -C ./libft/
 
-%.o: %.c
+%.o: $(SRC_PATH)%.c
 	$(CC) -c $(CFLAGS) $^
 
 clean:

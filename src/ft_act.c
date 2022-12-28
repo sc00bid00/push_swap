@@ -6,13 +6,12 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 13:31:09 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/28 16:14:10 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 17:21:00 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "get_next_line.h"
-#include "./libft/libft.h"
+#include <push_swap.h>
+#include <get_next_line.h>
 
 void	ft_act(t_stk **sta, t_stk **stb, t_var *var)
 {

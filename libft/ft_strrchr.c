@@ -6,11 +6,11 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 13:41:49 by lsordo            #+#    #+#             */
-/*   Updated: 2022/11/03 14:28:26 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/28 17:17:57 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include	<libft.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
