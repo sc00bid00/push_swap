@@ -6,11 +6,11 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 16:48:42 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/28 08:23:16 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/29 08:36:36 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <push_swap.h>
 
 void	ft_minp(t_stk *sta, t_var *var)
 {

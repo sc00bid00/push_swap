@@ -6,11 +6,11 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 15:07:45 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/28 08:45:35 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/29 08:36:36 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <push_swap.h>
 
 void	ft_helpa(t_stk **sta)
 {

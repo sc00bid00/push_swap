@@ -6,11 +6,11 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 17:03:17 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/28 09:45:43 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/29 08:44:56 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <push_swap.h>
 
 void	ft_abort(char **arr, t_stk **arg)
 {

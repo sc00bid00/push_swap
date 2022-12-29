@@ -6,11 +6,11 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 08:38:51 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/28 14:03:42 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/29 08:38:21 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include <get_next_line.h>
 
 char	*ft_strjoin_m(char *s1, char *s2)
 {

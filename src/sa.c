@@ -6,11 +6,11 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 14:43:10 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/27 15:51:12 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/29 08:36:36 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <push_swap.h>
 
 void	sa(t_stk **stk, int msg, t_var *var)
 {

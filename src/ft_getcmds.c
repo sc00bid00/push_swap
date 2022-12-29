@@ -6,12 +6,12 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 13:08:41 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/28 16:28:46 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/29 08:38:21 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "get_next_line.h"
+#include <push_swap.h>
+#include <get_next_line.h>
 
 void	ft_getcmds(t_stk **sta, t_stk **stb, t_var *var)
 {

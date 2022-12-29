@@ -6,11 +6,11 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 12:36:30 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 16:50:53 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/29 08:36:36 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <push_swap.h>
 
 void	ft_swap(t_stk *tmp1, t_stk *tmp2)
 {

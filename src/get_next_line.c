@@ -6,11 +6,11 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 10:27:04 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/28 14:03:37 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/29 08:38:21 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include <get_next_line.h>
 
 char	*ft_getrest(char *var)
 {

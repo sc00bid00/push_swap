@@ -6,11 +6,11 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 22:11:20 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/19 14:58:12 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/29 08:36:36 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <push_swap.h>
 
 void	ft_freear(char **arr)
 {

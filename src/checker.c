@@ -6,12 +6,12 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 13:02:40 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/28 15:13:25 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/29 08:38:21 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "get_next_line.h"
+#include <push_swap.h>
+#include <get_next_line.h>
 
 int	main(int argc, char **argv)
 {
