@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 08:38:51 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/29 08:38:21 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/29 13:57:13 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,10 +87,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*ptr;
 	unsigned int	i;
 
-	if (!s)
+	if (!s || len == 0 || start > ft_strlen(s))
 		return (NULL);
-	if (start > ft_strlen(s))
-		len = 0;
 	if (len > ft_strlen(s) - start)
 		len = ft_strlen(s) - start;
 	ptr = (char *)malloc((len + 1) * sizeof(char));
