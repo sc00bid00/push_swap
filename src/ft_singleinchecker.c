@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_singleinchecker.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/29 13:15:57 by lsordo            #+#    #+#             */
+/*   Updated: 2022/12/29 13:16:13 by lsordo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <push_swap.h>
 
 static int	ft_errsing(int i, char **arr)
@@ -15,7 +27,7 @@ static int	ft_errsing(int i, char **arr)
 			|| (ft_atoi(s) > 0 && s[0] == '-'))
 		{
 			ft_printf("Error\n");
-			return (1) ;
+			return (1);
 		}
 		j++;
 	}
