@@ -6,13 +6,15 @@
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/29 09:52:09 by lsordo           ###   ########.fr        #
+#    Updated: 2022/12/29 11:04:53 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =	push_swap
 
 NAME_B =checker
+
+CC = gcc
 
 SRC =	ft_init.c\
 		ft_prtstk.c\
@@ -66,7 +68,7 @@ OBJ_B =	$(SRC_B:%.c=$(OBJ_PATH)%.o)
 
 LIB =	./libft/libft.a
 
-CFLAGS = -Wall -Wextra -Werror -I $(HEADER_PATH)
+CFLAGS = -Wall -Wextra -Werror -I $(HEADER_PATH) -g
 
 all: $(NAME)
 
@@ -90,7 +92,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME) $(NAME_B)
-#	make fclean	-C ./libft/
+	make fclean -C ./libft/
 
 re: fclean all
 
