@@ -6,7 +6,7 @@
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/29 08:45:29 by lsordo           ###   ########.fr        #
+#    Updated: 2022/12/29 09:52:09 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,13 +56,13 @@ SRC_B =	$(SRC)\
 		ft_act.c\
 		checker.c
 
-OBJ =	$(SRC_PS:.c=.o)
-
-OBJ_B =	$(SRC_B:.c=.o)
-
 SRC_PATH = ./src/
 OBJ_PATH = ./obj/
 HEADER_PATH = ./includes/
+
+OBJ =	$(SRC_PS:%.c=$(OBJ_PATH)%.o)
+
+OBJ_B =	$(SRC_B:%.c=$(OBJ_PATH)%.o)
 
 LIB =	./libft/libft.a
 
@@ -81,16 +81,16 @@ $(NAME_B): $(OBJ_B) $(LIB)
 $(LIB):
 	$(MAKE) -C ./libft/
 
-%.o: $(SRC_PATH)%.c
-	$(CC) -c $(CFLAGS) $^
+$(OBJ_PATH)%.o: $(SRC_PATH)%.c
+	$(CC) -c $(CFLAGS) $^ -o $@
 
 clean:
-	rm -f *.o
+	rm -f $(OBJ_PATH)*.o
 	make clean -C ./libft/
 
 fclean: clean
 	rm -f $(NAME) $(NAME_B)
-	make fclean	-C ./libft/
+#	make fclean	-C ./libft/
 
 re: fclean all
 
