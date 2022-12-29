@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 13:02:40 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/29 11:55:05 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/29 13:04:11 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,11 @@ int	main(int argc, char **argv)
 	{
 		sta = NULL;
 		stb = NULL;
-		ft_init(argc, argv, &sta);
+		ft_initchecker(argc, argv, &sta);
 		var = malloc(sizeof(t_var));
 		var->prt = 0;
-		ft_index(&sta, var);
+		if (ft_stksize(sta, NULL) > 1)
+			ft_index(&sta, var);
 		var->argc = argc;
 		var->argv = argv;
 		ft_getcmds(&sta, &stb, var);

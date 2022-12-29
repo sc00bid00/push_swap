@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:11:06 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/29 08:45:36 by lsordo           ###   ########.fr       */
+/*   Updated: 2022/12/29 12:36:29 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,7 @@ int		ft_sorted(t_stk	*stk);
 void	ft_checkfail(t_stk **sta, t_stk **stb, t_var *var, char *msg);
 void	ft_act(t_stk **sta, t_stk **stb, t_var *var);
 void	ft_getcmds(t_stk **sta, t_stk **stb, t_var *var);
+void	ft_initchecker(int argc, char **argv, t_stk **arg);
+int		ft_singleinchecker(int argc, char **arr);
 
 #endif

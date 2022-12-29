@@ -6,7 +6,7 @@
 #    By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 17:33:43 by lsordo            #+#    #+#              #
-#    Updated: 2022/12/29 11:04:53 by lsordo           ###   ########.fr        #
+#    Updated: 2022/12/29 12:03:53 by lsordo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,8 @@ SRC_B =	$(SRC)\
 		ft_getcmds.c\
 		ft_checkfail.c\
 		ft_act.c\
+		ft_initchecker.c\
+		ft_singleinchecker.c\
 		checker.c
 
 SRC_PATH = ./src/
