@@ -6,7 +6,7 @@
 /*   By: lsordo <lsordo@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 09:56:45 by lsordo            #+#    #+#             */
-/*   Updated: 2022/12/28 17:17:57 by lsordo           ###   ########.fr       */
+/*   Updated: 2023/01/02 16:29:47 by lsordo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*ptr;
 	unsigned int	i;
 
-	if (!s)
+	if (!s || len == 0 || start > ft_strlen(s))
 		return (NULL);
 	if (start > ft_strlen(s))
 		len = 0;
